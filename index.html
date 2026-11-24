@@ -163,6 +163,87 @@ textarea{min-height:140px;resize:vertical}
 .wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
 .wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
 @media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
+/* menu kategorii */
+.rozw{position:static}
+.rozw-btn{background:none;border:0;font:inherit;font-size:16px;font-weight:500;color:var(--ink);padding:6px 0;cursor:pointer;display:inline-flex;align-items:center;gap:8px;border-bottom:2px solid transparent}
+.rozw-btn:hover,.rozw.otw .rozw-btn{border-color:var(--roz)}
+.szew{width:7px;height:7px;border-right:1.6px solid currentColor;border-bottom:1.6px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .2s}
+.rozw.otw .szew{transform:translateY(1px) rotate(225deg)}
+.mega{position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid var(--linia);box-shadow:0 18px 30px -24px rgba(21,18,20,.35);visibility:hidden;opacity:0;transform:translateY(-6px);transition:opacity .18s,transform .18s,visibility 0s .18s}
+.rozw.otw .mega{visibility:visible;opacity:1;transform:none;transition:opacity .18s,transform .18s}
+.mega-in{max-width:1360px;margin:0 auto;padding:30px 24px 26px}
+.mega-kol{display:grid;grid-template-columns:1fr 1.5fr 1fr 1fr;gap:32px}
+.mega-kol ul{list-style:none;margin:0;padding:0}
+.rozw .mega-kol li a,.rozw .mega-dz a{border:0;padding:0}
+.mega-kol li{margin:0 0 6px}
+.mega-kol div:nth-child(2) ul{columns:2;column-gap:28px}
+.nav .mega-kol li a{font-size:15.5px;font-weight:400;color:var(--ink2)}
+.nav .mega-kol li a:hover{color:var(--mal)}
+.mega-dz{font-family:"Fraunces",serif;font-size:20px;font-weight:600;margin:0 0 12px;padding-bottom:10px;border-bottom:1px solid var(--linia)}
+.nav .mega-dz a{font-size:20px;font-weight:600;color:var(--ink)}
+.mega-dol{margin-top:22px;padding-top:16px;border-top:1px solid var(--linia)}
+.nav .mega-dol a{color:var(--mal);font-weight:600;border:0;padding:0}
+.hd{position:sticky}
+.hd .wrap{position:static}
+@media (max-width:900px){
+ .rozw{width:100%;border-bottom:1px solid var(--linia)}
+ .rozw-btn{font-family:"Fraunces",serif;font-size:26px;padding:14px 0;width:100%;justify-content:space-between;border:0}
+ .szew{width:10px;height:10px}
+ .mega{position:static;visibility:visible;opacity:1;transform:none;box-shadow:none;border:0;display:none}
+ .rozw.otw .mega{display:block}
+ .mega-in{padding:0 0 18px}
+ .mega-kol{grid-template-columns:1fr;gap:18px}
+ .mega-kol div:nth-child(2) ul{columns:2;column-gap:16px}
+ .nav .mega-kol li a{font-family:"Figtree",sans-serif;font-size:17px;padding:4px 0;display:block;width:auto;border:0}
+ .mega-dz{font-size:19px;margin-bottom:8px;padding-bottom:6px}
+ .nav .mega-dz a{font-family:"Fraunces",serif;font-size:19px;padding:0;border:0;width:auto}
+ .nav .mega-dol a{font-family:"Figtree",sans-serif;font-size:17px;width:auto}
+}
+/* strona kategorii */
+.kat-gora{padding:72px 0 40px}
+.kat-gora h1{font-size:clamp(34px,4.6vw,56px);margin:0 0 16px}
+.kat-gora .pyt{margin-bottom:28px}
+.szuk{display:flex;gap:12px;max-width:760px}
+.szuk input{font-size:18px;padding:15px 16px}
+.chipy{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 0}
+.chipy button{font:inherit;font-size:15px;font-weight:500;padding:9px 16px;border:1px solid var(--ink);background:#fff;color:var(--ink);border-radius:40px;cursor:pointer}
+.chipy button:hover{border-color:var(--mal);color:var(--mal)}
+.chipy button[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.dzialy{display:grid;grid-template-columns:1fr 1.5fr 1fr 1fr;gap:40px;padding:36px 0 8px;border-top:1px solid var(--linia)}
+.dzialy h2{font-size:24px;margin:0 0 14px;padding-bottom:10px;border-bottom:1px solid var(--ink)}
+.dzialy h2 button{all:unset;cursor:pointer}
+.dzialy h2 button:hover{color:var(--mal)}
+.dzialy ul{list-style:none;margin:0;padding:0}
+.dzialy div:nth-child(2) ul{columns:2;column-gap:28px}
+.dzialy li{margin:0 0 4px;break-inside:avoid}
+.dzialy li button{all:unset;cursor:pointer;color:var(--ink2);font-size:16.5px;line-height:1.5;border-bottom:1px solid transparent}
+.dzialy li button:hover{color:var(--mal)}
+.dzialy li button.on{color:var(--mal);border-color:var(--mal);font-weight:600}
+.wyniki{padding:48px 0 96px}
+.wyn-gora{display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap;margin-bottom:14px}
+.wyn-gora h2{font-size:clamp(26px,3vw,36px)}
+.wyn-gora p{margin:0;color:#6b6468;font-size:15px}
+.wyn-gora button{font:inherit;font-size:15px;background:none;border:0;color:var(--mal);cursor:pointer;text-decoration:underline;padding:0}
+.teksty{list-style:none;margin:0;padding:0;border-top:1px solid var(--linia)}
+.teksty li{border-bottom:1px solid var(--linia)}
+.teksty a{display:grid;grid-template-columns:200px minmax(0,1fr) 150px;gap:24px;padding:18px 0;color:var(--ink);text-decoration:none;align-items:baseline}
+.teksty a:hover .tt{color:var(--mal)}
+.teksty .kk{font-size:14px;font-weight:600;color:var(--mal)}
+.teksty .tt{font-family:"Fraunces",serif;font-size:20px;line-height:1.3}
+.teksty .dd{font-size:14px;color:#6b6468;text-align:right}
+.pusto{padding:28px 0;color:#6b6468}
+.stare{max-width:860px}
+.stare table{width:100%;border-collapse:collapse;font-size:15px;margin-top:18px;background:#fff}
+.stare th,.stare td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--linia);vertical-align:top}
+.stare th{font-weight:600;background:var(--ink);color:#fff}
+.stare td:first-child{color:#6b6468;word-break:break-all}
+.stare td:last-child{word-break:break-all}
+.stare details{margin-top:8px}
+.stare summary{cursor:pointer;color:var(--mal);font-weight:600}
+@media (max-width:1100px){.dzialy,.mega-kol{grid-template-columns:1fr 1fr}}
+@media (max-width:900px){.mega-kol{grid-template-columns:1fr;gap:18px}.nav .mega-kol li a{line-height:1.4}}
+@media (max-width:900px){.kat-gora{padding:48px 0 28px}.teksty a{grid-template-columns:1fr;gap:4px}.teksty .dd{text-align:left}.wyniki{padding:36px 0 68px}}
+@media (max-width:600px){.dzialy{grid-template-columns:1fr;gap:28px}.dzialy div:nth-child(2) ul{columns:2;column-gap:16px}.szuk{flex-direction:column}.chipy button{font-size:14px;padding:8px 13px}.stare th:nth-child(2),.stare td:nth-child(2){display:none}}
 
 @media (max-width:1100px){
  .nav{gap:20px}
@@ -223,11 +304,19 @@ textarea{min-height:140px;resize:vertical}
   <a class="logo" href="#gora" aria-label="Kulturalne Rozmowy - strona główna"><img src="img/logo.webp" width="400" height="203" alt="Kulturalne Rozmowy"></a>
   <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
   <nav class="nav" id="nav">
-   <a href="#teksty">Recenzje i wywiady</a>
+   <div class="rozw">
+    <button class="rozw-btn" type="button" aria-expanded="false" aria-controls="mega">Kategorie<span class="szew" aria-hidden="true"></span></button>
+    <div class="mega" id="mega">
+     <div class="mega-in">
+      <div class="mega-kol"><div><p class="mega-dz"><a href="kategorie.html#recenzje">Recenzje</a></p><ul><li><a href="kategorie.html#recenzje-ksiazek">Recenzje książek</a></li><li><a href="kategorie.html#recenzje-filmow">Recenzje filmów</a></li><li><a href="kategorie.html#wyroznione">Wyróżnione recenzje</a></li></ul></div><div><p class="mega-dz"><a href="kategorie.html#rozmowy">Rozmowy</a></p><ul><li><a href="kategorie.html#o-ksiazkach">o książkach</a></li><li><a href="kategorie.html#o-muzyce">o muzyce</a></li><li><a href="kategorie.html#o-filmie">o filmie</a></li><li><a href="kategorie.html#o-sztuce">o sztuce</a></li><li><a href="kategorie.html#o-tancu">o tańcu</a></li><li><a href="kategorie.html#o-modzie">o modzie</a></li><li><a href="kategorie.html#o-sporcie">o sporcie</a></li><li><a href="kategorie.html#o-pasji">o pasji</a></li><li><a href="kategorie.html#o-wydarzeniach">o wydarzeniach</a></li><li><a href="kategorie.html#o-biznesie">o biznesie</a></li><li><a href="kategorie.html#z-ekspertem">z ekspertem</a></li></ul></div><div><p class="mega-dz"><a href="kategorie.html#artykuly-dzial">Artykuły</a></p><ul><li><a href="kategorie.html#artykuly">Artykuły</a></li><li><a href="kategorie.html#goscinne">Artykuły gościnne</a></li><li><a href="kategorie.html#sponsorowane">Artykuły sponsorowane</a></li></ul></div><div><p class="mega-dz"><a href="kategorie.html#cykle">Cykle tematyczne</a></p><ul><li><a href="kategorie.html#polacy-na-emigracji">Polacy na emigracji</a></li></ul></div></div>
+      <div class="mega-dol"><a href="kategorie.html">Wszystkie kategorie i wyszukiwarka tekstów</a></div>
+     </div>
+    </div>
+   </div>
    <a href="#o-mnie">O mnie</a>
    <a href="#wspolpraca">Współpraca</a>
    <a href="#opinie">Opinie</a>
-   <a href="#na-zywo">Na żywo</a>
+   <a href="kategorie.html#szukaj">Szukaj</a>
    <a class="btn" href="#kontakt">Kontakt</a>
   </nav>
  </div>
@@ -255,13 +344,14 @@ textarea{min-height:140px;resize:vertical}
    <p>O książkach, ale nie tylko. Recenzje literatury obyczajowej i psychologicznej, rozmowy z pisarzami, artystami i ekspertami, a obok nich historie zwykłych ludzi z pasją i cykl o Polakach na emigracji.</p>
   </div>
   <div class="tematy">
-   <a href="https://www.kulturalnerozmowy.pl/search/label/recenzja">Recenzje książek</a>
-   <a href="https://www.kulturalnerozmowy.pl/search/label/rozmowa%20o%20ksi%C4%85%C5%BCce">Rozmowy o książkach</a>
-   <a href="https://www.kulturalnerozmowy.pl/search/label/artyku%C5%82">Artykuły</a>
-   <a href="https://www.kulturalnerozmowy.pl/search/label/rozmowa%20o%20filmie">Film</a>
-   <a href="https://www.kulturalnerozmowy.pl/search/label/rozmowa%20o%20modzie">Moda</a>
-   <a href="https://www.kulturalnerozmowy.pl/search/label/rozmowa%20o%20biznesie">Biznes</a>
-   <a href="https://www.kulturalnerozmowy.pl/search/label/Polacy%20na%20emigracji">Polacy na emigracji</a>
+   <a href="kategorie.html#recenzje-ksiazek">Recenzje książek</a>
+   <a href="kategorie.html#o-ksiazkach">Rozmowy o książkach</a>
+   <a href="kategorie.html#artykuly">Artykuły</a>
+   <a href="kategorie.html#recenzje-filmow">Film</a>
+   <a href="kategorie.html#o-muzyce">Muzyka</a>
+   <a href="kategorie.html#o-sztuce">Sztuka</a>
+   <a href="kategorie.html#polacy-na-emigracji">Polacy na emigracji</a>
+   <a href="kategorie.html"><strong>Wszystkie kategorie</strong></a>
   </div>
   <div class="karuzela">
    <div class="tor" tabindex="0" aria-label="Najnowsze teksty">
@@ -413,7 +503,13 @@ document.getElementById('rok').textContent=new Date().getFullYear();
  var b=document.querySelector('.burger');
  b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-otw');b.setAttribute('aria-expanded',o)});
  document.querySelectorAll('.nav a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-otw');b.setAttribute('aria-expanded','false')})});
- var linki=[].slice.call(document.querySelectorAll('.nav a:not(.btn)'));
+ var rz=document.querySelector('.rozw'),rb=rz.querySelector('.rozw-btn');
+ function ust(o){rz.classList.toggle('otw',o);rb.setAttribute('aria-expanded',o)}
+ rb.addEventListener('click',function(e){e.stopPropagation();ust(!rz.classList.contains('otw'))});
+ document.addEventListener('click',function(e){if(!rz.contains(e.target))ust(false)});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape')ust(false)});
+ if(window.matchMedia('(hover:hover) and (min-width:901px)').matches){var tm;rz.addEventListener('mouseenter',function(){clearTimeout(tm);ust(true)});rz.addEventListener('mouseleave',function(){tm=setTimeout(function(){ust(false)},180)})}
+ var linki=[].slice.call(document.querySelectorAll('.nav > a:not(.btn)')).filter(function(a){return a.getAttribute('href').charAt(0)==='#'});
  var sekcje=linki.map(function(a){return document.querySelector(a.getAttribute('href'))});
  function akt(){var y=window.scrollY+120,i=-1;sekcje.forEach(function(s,k){if(s&&s.offsetTop<=y)i=k});linki.forEach(function(a,k){a.classList.toggle('on',k===i)})}
  window.addEventListener('scroll',akt,{passive:true});akt();
@@ -432,7 +528,7 @@ document.getElementById('rok').textContent=new Date().getFullYear();
    window.addEventListener('pointermove',mv);window.addEventListener('pointerup',up)});
   t.addEventListener('dragstart',function(e){e.preventDefault()});
  });
- document.getElementById('formularz').addEventListener('submit',function(e){e.preventDefault();
+ var fm=document.getElementById('formularz');if(fm)fm.addEventListener('submit',function(e){e.preventDefault();
   if(this.querySelector('.ok'))return;var d=document.createElement('p');d.className='ok';
   d.textContent='To podgląd strony, więc formularz niczego nie wysyła. Na docelowej stronie wiadomość trafi prosto na sylwia.cegiela@gmail.com.';this.appendChild(d)});
 })();

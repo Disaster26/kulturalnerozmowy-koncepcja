@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow" data-podglad>
+<title>Wszystkie kategorie i wyszukiwarka | Kulturalne Rozmowy</title>
+<meta name="description" content="Wszystkie kategorie portalu Kulturalne Rozmowy: recenzje książek i filmów, rozmowy o książkach, muzyce, sztuce i pasji, artykuły i cykl Polacy na emigracji. Wyszukiwarka tekstów.">
+<link rel="preload" href="fonts/fraunces-rdzen.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/figtree-rdzen.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Fraunces";font-weight:300 800;font-display:swap;src:url(fonts/fraunces-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AB,U+00B0,U+00B7,U+00BB,U+00D3,U+00F3,U+2013-2014,U+2018-2019,U+201C-201E,U+2022,U+2026}
+@font-face{font-family:"Fraunces";font-weight:300 800;font-display:swap;src:url(fonts/fraunces-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+@font-face{font-family:"Figtree";font-weight:400 700;font-display:swap;src:url(fonts/figtree-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AB,U+00B0,U+00B7,U+00BB,U+00D3,U+00F3,U+2013,U+2018-2019,U+201C-201E,U+2022,U+2026}
+@font-face{font-family:"Figtree";font-weight:400 700;font-display:swap;src:url(fonts/figtree-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+:root{--ink:#151214;--ink2:#3d3639;--szary:#F3F3F6;--linia:#dedde3;--roz:#F9B9E2;--mal:#B8287F;--mal2:#9a1f69;--w:1200px;--hd:74px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--hd) + 8px)}
+body{margin:0;font-family:"Figtree",system-ui,sans-serif;font-size:17px;line-height:1.65;color:var(--ink);background:#fff;-webkit-text-size-adjust:100%}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--mal)}
+h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:560;line-height:1.12;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(30px,4.2vw,50px)}
+h3{font-size:22px;font-weight:600}
+p{margin:0 0 1em}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;background:var(--mal);color:#fff;font-weight:600;font-size:17px;text-decoration:none;border:0;border-radius:4px;cursor:pointer;transition:background .2s}
+.btn:hover{background:var(--mal2)}
+.btn svg{width:22px;height:12px}
+
+/* naglowek */
+.hd{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--linia);height:var(--hd)}
+.hd .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;max-width:1360px}
+.logo img{height:56px;width:auto}
+.nav{display:flex;gap:28px;align-items:center}
+.nav a{color:var(--ink);text-decoration:none;font-size:16px;font-weight:500;padding:6px 0;border-bottom:2px solid transparent}
+.nav a:hover{border-color:var(--roz)}
+.nav a.on{border-color:var(--mal)}
+.nav .btn{min-height:44px;padding:0 20px;color:#fff;border:0;font-size:15px}
+.burger{display:none;background:none;border:0;width:48px;height:48px;padding:12px;cursor:pointer}
+.burger span{display:block;height:2px;background:var(--ink);margin:6px 0;transition:transform .2s,opacity .2s}
+
+/* pierwszy ekran */
+.hero{position:relative;background:var(--ink);color:#fff;min-height:calc(100svh - var(--hd));max-height:1000px;display:flex;align-items:center;overflow:hidden}
+.hero .foto{position:absolute;top:0;bottom:0;right:0;left:28%}
+.hero .foto img{width:100%;height:100%;object-fit:cover;object-position:50% 32%}
+.hero .foto::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--ink) 0%,rgba(21,18,20,.86) 16%,rgba(21,18,20,.25) 46%,rgba(21,18,20,0) 62%)}
+.hero .tresc{position:relative;max-width:1360px;width:100%;margin:0 auto;padding:clamp(28px,5vh,56px) 24px}
+.hero .kol{max-width:600px}
+.hero .kto{font-size:16px;color:#f3d6e8;margin:0 0 22px}
+.hero h1{font-size:clamp(34px,min(4.6vw,6.4vh),62px);margin:0 0 22px}
+.hero .lead{font-size:clamp(17px,1.4vw,20px);color:#ece8ea;max-width:520px;margin:0 0 32px}
+.galazka{display:block;width:150px;height:auto;margin:0 0 26px}
+.hero .galazka{width:170px;margin:0 0 clamp(12px,2.4vh,26px)}
+
+/* separator z galazka */
+.sep{display:flex;align-items:center;gap:0;margin:0 0 34px}
+.sep::before{content:"";flex:0 0 56px;height:1px;background:var(--ink)}
+.sep svg{width:64px;height:24px;margin-left:-2px}
+
+section{padding:96px 0}
+.szare{background:var(--szary)}
+.pyt{max-width:780px;margin-bottom:40px}
+.pyt p{font-size:19px;color:var(--ink2);margin-top:18px}
+
+/* tematy */
+.tematy{display:flex;flex-wrap:wrap;gap:10px 26px;margin:0 0 56px;padding:22px 0;border-top:1px solid var(--linia);border-bottom:1px solid var(--linia)}
+.tematy a{color:var(--ink);text-decoration:none;font-size:17px}
+.tematy a:hover{color:var(--mal)}
+
+/* karuzele */
+.karuzela{position:relative}
+.tor{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:4px;cursor:grab;-webkit-overflow-scrolling:touch}
+.tor::-webkit-scrollbar{display:none}
+.tor.ciag{cursor:grabbing;scroll-snap-type:none}
+.tor.ciag a{pointer-events:none}
+.strz{display:flex;gap:10px;justify-content:flex-end;margin-top:22px}
+.strz button{width:48px;height:48px;border:1px solid var(--ink);background:#fff;border-radius:50%;cursor:pointer;display:grid;place-items:center}
+.strz button:hover{background:var(--ink)}
+.strz button:hover path{stroke:#fff}
+.strz button:disabled{opacity:.3;cursor:default;background:#fff}
+.strz button:disabled path{stroke:var(--ink)}
+.strz svg{width:20px;height:14px}
+.wpis{flex:0 0 calc((100% - 48px)/3);scroll-snap-align:start;text-decoration:none;color:var(--ink);background:#fff}
+.wpis .ob{aspect-ratio:4/3;overflow:hidden;background:var(--szary)}
+.wpis .ob img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.wpis:hover .ob img{transform:scale(1.03)}
+.wpis .op{padding:20px 2px 0}
+.wpis .kat{font-size:14px;color:var(--mal);font-weight:600;margin:0 0 6px}
+.wpis h3{font-size:22px;margin:0 0 10px}
+.wpis .data{font-size:14px;color:#6b6468}
+
+/* o mnie */
+.omnie{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:72px;align-items:center}
+.omnie figure{margin:0;position:relative;max-width:512px}
+.omnie figure img{width:100%;aspect-ratio:1;object-fit:cover}
+.omnie figcaption{font-size:14px;color:#6b6468;margin-top:10px}
+.omnie .podpis{font-family:"Fraunces",serif;font-size:21px;margin-top:8px}
+.okladki{border-left:2px solid var(--roz);padding:4px 0 4px 20px;margin:26px 0;color:var(--ink2)}
+
+/* wspolpraca */
+.ciemne{background:var(--ink);color:#fff}
+.ciemne .sep::before{background:#fff}
+.ciemne .pyt p{color:#d9d3d6}
+.oferta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 72px;margin-top:8px}
+.oferta div{padding:30px 0;border-top:1px solid rgba(255,255,255,.18)}
+.oferta h3{font-size:25px;margin:0 0 10px}
+.oferta p{color:#d9d3d6;margin:0}
+.proces{margin-top:56px;padding:34px 0 0;border-top:1px solid rgba(255,255,255,.18);display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:48px;align-items:start}
+.proces ol{margin:0;padding-left:22px;color:#e8e3e6}
+.proces li{margin:0 0 10px;padding-left:6px}
+.proces li::marker{color:var(--roz);font-family:"Fraunces",serif;font-weight:600}
+.ciemne .btn{margin-top:26px}
+
+/* opinie */
+.opinia{flex:0 0 calc((100% - 48px)/3);scroll-snap-align:start;background:var(--szary);padding:34px 30px 30px;display:flex;flex-direction:column}
+.opinia svg{width:38px;height:30px;margin-bottom:16px}
+.opinia blockquote{margin:0 0 22px;font-family:"Fraunces",serif;font-size:20px;line-height:1.45;font-weight:420;flex:1}
+.opinia .kto{font-weight:600}
+.opinia .kto span{display:block;font-weight:400;color:#6b6468;font-size:15px}
+
+/* na zywo */
+.live{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:56px;align-items:start}
+.lista{list-style:none;margin:0;padding:0;border-top:1px solid var(--linia)}
+.lista li{border-bottom:1px solid var(--linia)}
+.lista a{display:flex;justify-content:space-between;gap:24px;padding:20px 0;color:var(--ink);text-decoration:none;font-size:18px}
+.lista a:hover{color:var(--mal)}
+.lista a span{color:#6b6468;font-size:15px;white-space:nowrap}
+.profile{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:26px}
+.profile a{color:var(--ink);font-weight:500}
+
+/* kontakt */
+.kontakt{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:72px;align-items:start}
+.mail{font-family:"Fraunces",serif;font-size:clamp(22px,2.4vw,30px);color:var(--ink);text-decoration:none;border-bottom:2px solid var(--roz);word-break:break-all}
+.mail:hover{border-color:var(--mal)}
+form{display:grid;gap:16px}
+.dwa{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:block;font-size:15px;font-weight:600;margin-bottom:6px}
+input,select,textarea{width:100%;font:inherit;font-size:17px;padding:13px 14px;border:1px solid #c9c6cd;border-radius:4px;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--mal);outline-offset:1px;border-color:var(--mal)}
+textarea{min-height:140px;resize:vertical}
+.info{font-size:15px;color:#6b6468;margin:0}
+.ok{background:var(--szary);border-left:3px solid var(--mal);padding:14px 16px;font-size:16px}
+
+/* stopka */
+.ft{background:var(--szary);padding:64px 0 28px;font-size:15px}
+.ft .kol{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.ft h4{font-family:"Fraunces",serif;font-size:18px;font-weight:600;margin:0 0 12px}
+.ft ul{list-style:none;margin:0;padding:0}
+.ft li{margin:0 0 7px}
+.ft a{color:var(--ink);text-decoration:none}
+.ft a:hover{color:var(--mal)}
+.ft .logo img{height:64px;margin-bottom:14px}
+.ft .dol{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:44px;padding-top:22px;border-top:1px solid var(--linia);color:#5d575a}
+.wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
+.wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
+.wylinka-badge:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.wylinka-badge svg{width:18px;height:18px;flex:none;overflow:visible}
+.wylinka-badge b{font-weight:600}
+.wylinka-badge .wy-old{opacity:.45;transform-origin:40px 30px;transition:transform .32s cubic-bezier(.3,.7,.4,1),opacity .32s ease-out}
+.wylinka-badge .wy-pod{opacity:0;transition:opacity .2s ease-out .08s}
+.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
+.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
+@media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
+/* menu kategorii */
+.rozw{position:static}
+.rozw-btn{background:none;border:0;font:inherit;font-size:16px;font-weight:500;color:var(--ink);padding:6px 0;cursor:pointer;display:inline-flex;align-items:center;gap:8px;border-bottom:2px solid transparent}
+.rozw-btn:hover,.rozw.otw .rozw-btn{border-color:var(--roz)}
+.szew{width:7px;height:7px;border-right:1.6px solid currentColor;border-bottom:1.6px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .2s}
+.rozw.otw .szew{transform:translateY(1px) rotate(225deg)}
+.mega{position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid var(--linia);box-shadow:0 18px 30px -24px rgba(21,18,20,.35);visibility:hidden;opacity:0;transform:translateY(-6px);transition:opacity .18s,transform .18s,visibility 0s .18s}
+.rozw.otw .mega{visibility:visible;opacity:1;transform:none;transition:opacity .18s,transform .18s}
+.mega-in{max-width:1360px;margin:0 auto;padding:30px 24px 26px}
+.mega-kol{display:grid;grid-template-columns:1fr 1.5fr 1fr 1fr;gap:32px}
+.mega-kol ul{list-style:none;margin:0;padding:0}
+.rozw .mega-kol li a,.rozw .mega-dz a{border:0;padding:0}
+.mega-kol li{margin:0 0 6px}
+.mega-kol div:nth-child(2) ul{columns:2;column-gap:28px}
+.nav .mega-kol li a{font-size:15.5px;font-weight:400;color:var(--ink2)}
+.nav .mega-kol li a:hover{color:var(--mal)}
+.mega-dz{font-family:"Fraunces",serif;font-size:20px;font-weight:600;margin:0 0 12px;padding-bottom:10px;border-bottom:1px solid var(--linia)}
+.nav .mega-dz a{font-size:20px;font-weight:600;color:var(--ink)}
+.mega-dol{margin-top:22px;padding-top:16px;border-top:1px solid var(--linia)}
+.nav .mega-dol a{color:var(--mal);font-weight:600;border:0;padding:0}
+.hd{position:sticky}
+.hd .wrap{position:static}
+@media (max-width:900px){
+ .rozw{width:100%;border-bottom:1px solid var(--linia)}
+ .rozw-btn{font-family:"Fraunces",serif;font-size:26px;padding:14px 0;width:100%;justify-content:space-between;border:0}
+ .szew{width:10px;height:10px}
+ .mega{position:static;visibility:visible;opacity:1;transform:none;box-shadow:none;border:0;display:none}
+ .rozw.otw .mega{display:block}
+ .mega-in{padding:0 0 18px}
+ .mega-kol{grid-template-columns:1fr;gap:18px}
+ .mega-kol div:nth-child(2) ul{columns:2;column-gap:16px}
+ .nav .mega-kol li a{font-family:"Figtree",sans-serif;font-size:17px;padding:4px 0;display:block;width:auto;border:0}
+ .mega-dz{font-size:19px;margin-bottom:8px;padding-bottom:6px}
+ .nav .mega-dz a{font-family:"Fraunces",serif;font-size:19px;padding:0;border:0;width:auto}
+ .nav .mega-dol a{font-family:"Figtree",sans-serif;font-size:17px;width:auto}
+}
+/* strona kategorii */
+.kat-gora{padding:72px 0 40px}
+.kat-gora h1{font-size:clamp(34px,4.6vw,56px);margin:0 0 16px}
+.kat-gora .pyt{margin-bottom:28px}
+.szuk{display:flex;gap:12px;max-width:760px}
+.szuk input{font-size:18px;padding:15px 16px}
+.chipy{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 0}
+.chipy button{font:inherit;font-size:15px;font-weight:500;padding:9px 16px;border:1px solid var(--ink);background:#fff;color:var(--ink);border-radius:40px;cursor:pointer}
+.chipy button:hover{border-color:var(--mal);color:var(--mal)}
+.chipy button[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.dzialy{display:grid;grid-template-columns:1fr 1.5fr 1fr 1fr;gap:40px;padding:36px 0 8px;border-top:1px solid var(--linia)}
+.dzialy h2{font-size:24px;margin:0 0 14px;padding-bottom:10px;border-bottom:1px solid var(--ink)}
+.dzialy h2 button{all:unset;cursor:pointer}
+.dzialy h2 button:hover{color:var(--mal)}
+.dzialy ul{list-style:none;margin:0;padding:0}
+.dzialy div:nth-child(2) ul{columns:2;column-gap:28px}
+.dzialy li{margin:0 0 4px;break-inside:avoid}
+.dzialy li button{all:unset;cursor:pointer;color:var(--ink2);font-size:16.5px;line-height:1.5;border-bottom:1px solid transparent}
+.dzialy li button:hover{color:var(--mal)}
+.dzialy li button.on{color:var(--mal);border-color:var(--mal);font-weight:600}
+.wyniki{padding:48px 0 96px}
+.wyn-gora{display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap;margin-bottom:14px}
+.wyn-gora h2{font-size:clamp(26px,3vw,36px)}
+.wyn-gora p{margin:0;color:#6b6468;font-size:15px}
+.wyn-gora button{font:inherit;font-size:15px;background:none;border:0;color:var(--mal);cursor:pointer;text-decoration:underline;padding:0}
+.teksty{list-style:none;margin:0;padding:0;border-top:1px solid var(--linia)}
+.teksty li{border-bottom:1px solid var(--linia)}
+.teksty a{display:grid;grid-template-columns:200px minmax(0,1fr) 150px;gap:24px;padding:18px 0;color:var(--ink);text-decoration:none;align-items:baseline}
+.teksty a:hover .tt{color:var(--mal)}
+.teksty .kk{font-size:14px;font-weight:600;color:var(--mal)}
+.teksty .tt{font-family:"Fraunces",serif;font-size:20px;line-height:1.3}
+.teksty .dd{font-size:14px;color:#6b6468;text-align:right}
+.pusto{padding:28px 0;color:#6b6468}
+.stare{max-width:860px}
+.stare table{width:100%;border-collapse:collapse;font-size:15px;margin-top:18px;background:#fff}
+.stare th,.stare td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--linia);vertical-align:top}
+.stare th{font-weight:600;background:var(--ink);color:#fff}
+.stare td:first-child{color:#6b6468;word-break:break-all}
+.stare td:last-child{word-break:break-all}
+.stare details{margin-top:8px}
+.stare summary{cursor:pointer;color:var(--mal);font-weight:600}
+@media (max-width:1100px){.dzialy,.mega-kol{grid-template-columns:1fr 1fr}}
+@media (max-width:900px){.mega-kol{grid-template-columns:1fr;gap:18px}.nav .mega-kol li a{line-height:1.4}}
+@media (max-width:900px){.kat-gora{padding:48px 0 28px}.teksty a{grid-template-columns:1fr;gap:4px}.teksty .dd{text-align:left}.wyniki{padding:36px 0 68px}}
+@media (max-width:600px){.dzialy{grid-template-columns:1fr;gap:28px}.dzialy div:nth-child(2) ul{columns:2;column-gap:16px}.szuk{flex-direction:column}.chipy button{font-size:14px;padding:8px 13px}.stare th:nth-child(2),.stare td:nth-child(2){display:none}}
+
+@media (max-width:1100px){
+ .nav{gap:20px}
+ .wpis,.opinia{flex-basis:calc((100% - 24px)/2)}
+}
+@media (max-width:900px){
+ :root{--hd:62px}
+ .logo img{height:44px}
+ .burger{display:block}
+ .nav{position:fixed;top:var(--hd);left:0;right:0;bottom:0;background:#fff;flex-direction:column;align-items:flex-start;gap:0;padding:12px 24px 32px;transform:translateX(100%);transition:transform .25s;overflow:auto}
+ .nav a{font-family:"Fraunces",serif;font-size:26px;padding:14px 0;width:100%;border-bottom:1px solid var(--linia)}
+ .nav .btn{margin-top:22px;font-family:"Figtree",sans-serif;font-size:17px;min-height:52px;width:100%}
+ .menu-otw .nav{transform:none}
+ .menu-otw .burger span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+ .menu-otw .burger span:nth-child(2){opacity:0}
+ .menu-otw .burger span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+ .hero{align-items:flex-end;max-height:none}
+ .hero .foto{left:0;bottom:auto;height:64%}
+ .hero .foto img{object-position:50% 30%}
+ .hero .foto::after{bottom:-2px;background:linear-gradient(180deg,rgba(21,18,20,0) 40%,rgba(21,18,20,.6) 70%,var(--ink) 96%)}
+ .hero .tresc{padding:38svh 20px 26px}
+ .hero .galazka{display:none}
+ .hero .kto{font-size:15px;margin-bottom:12px}
+ .hero h1{margin-bottom:14px}
+ .hero .lead{margin-bottom:24px}
+ section{padding:68px 0}
+ .omnie,.kontakt,.proces,.live{grid-template-columns:1fr;gap:36px}
+ .oferta{grid-template-columns:1fr}
+ .ft .kol{grid-template-columns:1fr 1fr}
+ .ft .kol>div:first-child{grid-column:1/-1}
+}
+@media (max-width:600px){
+ body{font-size:16px}
+ .wrap{padding:0 20px}
+ .wpis,.opinia{flex-basis:84%}
+ .pyt p{font-size:17px}
+ .dwa{grid-template-columns:1fr}
+ .hero h1{font-size:31px}
+ .hero .lead{font-size:16px;line-height:1.55}
+ .btn{width:100%}
+ .lista a{flex-direction:column;gap:2px;font-size:17px}
+}
+@media (max-width:600px) and (max-height:700px){
+ .hero .tresc{padding-top:30svh}
+ .hero h1{font-size:27px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <symbol id="kwiat" viewBox="0 0 64 24"><path d="M0 18 C14 18 24 16 34 12" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M34 12 C38 4 46 2 50 6 C46 8 40 10 34 12Z" fill="#F9B9E2" stroke="#151214" stroke-width="1.1"/><path d="M34 12 C42 8 52 10 56 16 C50 18 41 16 34 12Z" fill="#F9B9E2" stroke="#151214" stroke-width="1.1"/><path d="M34 12 C38 13 44 18 44 23 C39 21 35 17 34 12Z" fill="#F9B9E2" stroke="#151214" stroke-width="1.1"/><path d="M22 15.5 C24 11 28 10 30 11 C28 13 25 14.5 22 15.5Z" fill="#F9B9E2" stroke="#151214" stroke-width="1"/></symbol>
+ <symbol id="strz" viewBox="0 0 22 12"><path d="M0 6h20M15 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+</svg>
+
+<header class="hd" id="gora">
+ <div class="wrap">
+  <a class="logo" href="index.html" aria-label="Kulturalne Rozmowy - strona główna"><img src="img/logo.webp" width="400" height="203" alt="Kulturalne Rozmowy"></a>
+  <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+  <nav class="nav" id="nav">
+   <div class="rozw">
+    <button class="rozw-btn" type="button" aria-expanded="false" aria-controls="mega">Kategorie<span class="szew" aria-hidden="true"></span></button>
+    <div class="mega" id="mega">
+     <div class="mega-in">
+      <div class="mega-kol"><div><p class="mega-dz"><a href="kategorie.html#recenzje">Recenzje</a></p><ul><li><a href="kategorie.html#recenzje-ksiazek">Recenzje książek</a></li><li><a href="kategorie.html#recenzje-filmow">Recenzje filmów</a></li><li><a href="kategorie.html#wyroznione">Wyróżnione recenzje</a></li></ul></div><div><p class="mega-dz"><a href="kategorie.html#rozmowy">Rozmowy</a></p><ul><li><a href="kategorie.html#o-ksiazkach">o książkach</a></li><li><a href="kategorie.html#o-muzyce">o muzyce</a></li><li><a href="kategorie.html#o-filmie">o filmie</a></li><li><a href="kategorie.html#o-sztuce">o sztuce</a></li><li><a href="kategorie.html#o-tancu">o tańcu</a></li><li><a href="kategorie.html#o-modzie">o modzie</a></li><li><a href="kategorie.html#o-sporcie">o sporcie</a></li><li><a href="kategorie.html#o-pasji">o pasji</a></li><li><a href="kategorie.html#o-wydarzeniach">o wydarzeniach</a></li><li><a href="kategorie.html#o-biznesie">o biznesie</a></li><li><a href="kategorie.html#z-ekspertem">z ekspertem</a></li></ul></div><div><p class="mega-dz"><a href="kategorie.html#artykuly-dzial">Artykuły</a></p><ul><li><a href="kategorie.html#artykuly">Artykuły</a></li><li><a href="kategorie.html#goscinne">Artykuły gościnne</a></li><li><a href="kategorie.html#sponsorowane">Artykuły sponsorowane</a></li></ul></div><div><p class="mega-dz"><a href="kategorie.html#cykle">Cykle tematyczne</a></p><ul><li><a href="kategorie.html#polacy-na-emigracji">Polacy na emigracji</a></li></ul></div></div>
+      <div class="mega-dol"><a href="kategorie.html">Wszystkie kategorie i wyszukiwarka tekstów</a></div>
+     </div>
+    </div>
+   </div>
+   <a href="index.html#o-mnie">O mnie</a>
+   <a href="index.html#wspolpraca">Współpraca</a>
+   <a href="index.html#opinie">Opinie</a>
+   <a href="kategorie.html#szukaj">Szukaj</a>
+   <a class="btn" href="index.html#kontakt">Kontakt</a>
+  </nav>
+ </div>
+</header>
+
+<main>
+<section class="kat-gora" id="szukaj">
+ <div class="wrap">
+  <div class="sep" aria-hidden="true"><svg><use href="#kwiat"/></svg></div>
+  <div class="pyt">
+   <h1>Wszystkie kategorie</h1>
+   <p>Ponad 800 tekstów od 2015 roku w czterech działach. Każda kategoria z dotychczasowej strony zostaje, a stare linki prowadzą we właściwe miejsce.</p>
+  </div>
+  <form class="szuk" role="search" onsubmit="return false">
+   <label for="q" class="sr" style="position:absolute;left:-9999px">Szukaj tekstu</label>
+   <input id="q" type="search" placeholder="Szukaj: autor, tytuł książki, temat..." autocomplete="off">
+  </form>
+  <div class="chipy" role="group" aria-label="Dział"><button type="button" aria-pressed="true" data-dz="">Wszystkie</button><button type="button" aria-pressed="false" data-dz="recenzje">Recenzje</button><button type="button" aria-pressed="false" data-dz="rozmowy">Rozmowy</button><button type="button" aria-pressed="false" data-dz="artykuly-dzial">Artykuły</button><button type="button" aria-pressed="false" data-dz="cykle">Cykle tematyczne</button></div>
+ </div>
+</section>
+<section style="padding:0">
+ <div class="wrap"><div class="dzialy"><div><h2><button type="button" data-dz="recenzje" id="recenzje">Recenzje</button></h2><ul><li><button type="button" data-p="recenzje-ksiazek" id="recenzje-ksiazek">Recenzje książek</button></li><li><button type="button" data-p="recenzje-filmow" id="recenzje-filmow">Recenzje filmów</button></li><li><button type="button" data-p="wyroznione" id="wyroznione">Wyróżnione recenzje</button></li></ul></div><div><h2><button type="button" data-dz="rozmowy" id="rozmowy">Rozmowy</button></h2><ul><li><button type="button" data-p="o-ksiazkach" id="o-ksiazkach">o książkach</button></li><li><button type="button" data-p="o-muzyce" id="o-muzyce">o muzyce</button></li><li><button type="button" data-p="o-filmie" id="o-filmie">o filmie</button></li><li><button type="button" data-p="o-sztuce" id="o-sztuce">o sztuce</button></li><li><button type="button" data-p="o-tancu" id="o-tancu">o tańcu</button></li><li><button type="button" data-p="o-modzie" id="o-modzie">o modzie</button></li><li><button type="button" data-p="o-sporcie" id="o-sporcie">o sporcie</button></li><li><button type="button" data-p="o-pasji" id="o-pasji">o pasji</button></li><li><button type="button" data-p="o-wydarzeniach" id="o-wydarzeniach">o wydarzeniach</button></li><li><button type="button" data-p="o-biznesie" id="o-biznesie">o biznesie</button></li><li><button type="button" data-p="z-ekspertem" id="z-ekspertem">z ekspertem</button></li></ul></div><div><h2><button type="button" data-dz="artykuly-dzial" id="artykuly-dzial">Artykuły</button></h2><ul><li><button type="button" data-p="artykuly" id="artykuly">Artykuły</button></li><li><button type="button" data-p="goscinne" id="goscinne">Artykuły gościnne</button></li><li><button type="button" data-p="sponsorowane" id="sponsorowane">Artykuły sponsorowane</button></li></ul></div><div><h2><button type="button" data-dz="cykle" id="cykle">Cykle tematyczne</button></h2><ul><li><button type="button" data-p="polacy-na-emigracji" id="polacy-na-emigracji">Polacy na emigracji</button></li></ul></div></div></div>
+</section>
+<section class="wyniki">
+ <div class="wrap">
+  <div class="wyn-gora"><h2 id="wyn-tyt">Najnowsze teksty</h2><p><span id="wyn-ile"></span> <button type="button" id="wyczysc" hidden>Pokaż wszystkie</button></p></div>
+  <ul class="teksty" id="lista"></ul>
+  <p style="margin-top:24px"><button type="button" class="btn" id="wiecej" hidden>Pokaż kolejne teksty</button></p>
+  <p class="pusto" id="pusto" hidden>Brak tekstów dla tego wyboru. Spróbuj innego słowa albo kategorii.</p>
+ </div>
+</section>
+<section class="szare">
+ <div class="wrap stare">
+  <div class="sep" aria-hidden="true"><svg><use href="#kwiat"/></svg></div>
+  <h2>Stare linki dalej działają</h2>
+  <p style="margin-top:16px;color:var(--ink2)">Każdy wpis zachowuje adres w tym samym schemacie co dziś, a każda etykieta z obecnej strony ma przekierowanie do nowej kategorii. Linki udostępnione w mediach społecznościowych, u wydawców i w wyszukiwarce prowadzą tam, gdzie trzeba.</p>
+  <details><summary>Zobacz, gdzie trafia każda etykieta</summary>
+   <table><thead><tr><th>Dotychczasowy adres</th><th>Etykieta</th><th>Nowa kategoria</th></tr></thead><tbody><tr><td>/search/label/recenzja%20ksi%C4%85%C5%BCki</td><td>recenzja książki</td><td>/kategoria/recenzje/recenzje-ksiazek/</td></tr><tr><td>/search/label/recenzja</td><td>recenzja</td><td>/kategoria/recenzje/recenzje-ksiazek/</td></tr><tr><td>/search/label/recenzje</td><td>recenzje</td><td>/kategoria/recenzje/recenzje-ksiazek/</td></tr><tr><td>/search/label/recenzja%20filmu</td><td>recenzja filmu</td><td>/kategoria/recenzje/recenzje-filmow/</td></tr><tr><td>/search/label/film</td><td>film</td><td>/kategoria/recenzje/recenzje-filmow/</td></tr><tr><td>/search/label/wyr%C3%B3%C5%BCniona%20recenzja</td><td>wyróżniona recenzja</td><td>/kategoria/recenzje/wyroznione/</td></tr><tr><td>/search/label/rozmowa%20o%20ksi%C4%85%C5%BCce</td><td>rozmowa o książce</td><td>/kategoria/rozmowy/o-ksiazkach/</td></tr><tr><td>/search/label/rozmowa%20o%20muzyce</td><td>rozmowa o muzyce</td><td>/kategoria/rozmowy/o-muzyce/</td></tr><tr><td>/search/label/rozmowa%20o%20%20muzyce</td><td>rozmowa o  muzyce</td><td>/kategoria/rozmowy/o-muzyce/</td></tr><tr><td>/search/label/rozmowa%20o%20filmie</td><td>rozmowa o filmie</td><td>/kategoria/rozmowy/o-filmie/</td></tr><tr><td>/search/label/rozmowa%20o%20sztuce</td><td>rozmowa o sztuce</td><td>/kategoria/rozmowy/o-sztuce/</td></tr><tr><td>/search/label/rozmowa%20o%20ta%C5%84cu</td><td>rozmowa o tańcu</td><td>/kategoria/rozmowy/o-tancu/</td></tr><tr><td>/search/label/rozmowa%20o%20modzie</td><td>rozmowa o modzie</td><td>/kategoria/rozmowy/o-modzie/</td></tr><tr><td>/search/label/rozmowa%20o%20sporcie</td><td>rozmowa o sporcie</td><td>/kategoria/rozmowy/o-sporcie/</td></tr><tr><td>/search/label/rozmowy%20o%20sporcie</td><td>rozmowy o sporcie</td><td>/kategoria/rozmowy/o-sporcie/</td></tr><tr><td>/search/label/rozmowa%20o%20pasji</td><td>rozmowa o pasji</td><td>/kategoria/rozmowy/o-pasji/</td></tr><tr><td>/search/label/rozmowa%20o%20wydarzeniu</td><td>rozmowa o wydarzeniu</td><td>/kategoria/rozmowy/o-wydarzeniach/</td></tr><tr><td>/search/label/rozmowa%20o%20biznesie</td><td>rozmowa o biznesie</td><td>/kategoria/rozmowy/o-biznesie/</td></tr><tr><td>/search/label/artyku%C5%82</td><td>artykuł</td><td>/kategoria/artykuly/artykuly/</td></tr><tr><td>/search/label/artyku%C5%82%20go%C5%9Bcinny</td><td>artykuł gościnny</td><td>/kategoria/artykuly/goscinne/</td></tr><tr><td>/search/label/artyku%C5%82%20sponsorowany</td><td>artykuł sponsorowany</td><td>/kategoria/artykuly/sponsorowane/</td></tr><tr><td>/search/label/Polacy%20na%20emigracji</td><td>Polacy na emigracji</td><td>/kategoria/cykle/polacy-na-emigracji/</td></tr><tr><td>/search/label/wywiady</td><td>wywiady</td><td>/kategoria/rozmowy/</td></tr><tr><td>/search/label/sliderpost</td><td>sliderpost</td><td>/ (wyróżnienie na stronie głównej)</td></tr></tbody></table>
+  </details>
+ </div>
+</section>
+</main>
+
+<footer class="ft">
+ <div class="wrap">
+  <div class="kol">
+   <div><a class="logo" href="index.html"><img src="img/logo.webp" width="400" height="203" alt="Kulturalne Rozmowy" loading="lazy"></a><p style="max-width:330px;color:#4d4649">Portal literacko-kulturalny od 2015 roku. Recenzje książek, wywiady z autorami i rozmowy z ludźmi kultury.</p></div>
+   <div><h4>Portal</h4><ul><li><a href="index.html#teksty">Recenzje i wywiady</a></li><li><a href="index.html#o-mnie">O mnie</a></li><li><a href="index.html#opinie">Opinie</a></li><li><a href="https://www.kulturalnerozmowy.pl/p/patronaty.html">Patronaty</a></li></ul></div>
+   <div><h4>Współpraca</h4><ul><li><a href="index.html#wspolpraca">Dla autorów</a></li><li><a href="index.html#wspolpraca">Dla wydawców</a></li><li><a href="https://www.kulturalnerozmowy.pl/p/faq.html">FAQ</a></li><li><a href="index.html#kontakt">Kontakt</a></li></ul></div>
+   <div><h4>Obserwuj</h4><ul><li><a href="https://www.instagram.com/sylwiacegiela/">Instagram</a></li><li><a href="https://www.facebook.com/portalkulturalnerozmowy/">Facebook</a></li><li><a href="https://www.youtube.com/@sylwiacegiela">YouTube</a></li><li><a href="https://www.tiktok.com/@sylwiacegiela">TikTok</a></li></ul></div>
+  </div>
+  <div class="dol"><span>&copy; <span id="rok">2026</span> Kulturalne Rozmowy. <a href="https://www.kulturalnerozmowy.pl/p/polityka-prywatnosci.html">Polityka prywatności</a></span><a class="wylinka-badge" href="https://wylinka.pl/?utm_source=kulturalnerozmowy.pl&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a></div>
+ </div>
+</footer>
+
+<script>
+document.getElementById('rok').textContent=new Date().getFullYear();
+(function(){
+ var b=document.querySelector('.burger');
+ b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-otw');b.setAttribute('aria-expanded',o)});
+ document.querySelectorAll('.nav a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-otw');b.setAttribute('aria-expanded','false')})});
+ var rz=document.querySelector('.rozw'),rb=rz.querySelector('.rozw-btn');
+ function ust(o){rz.classList.toggle('otw',o);rb.setAttribute('aria-expanded',o)}
+ rb.addEventListener('click',function(e){e.stopPropagation();ust(!rz.classList.contains('otw'))});
+ document.addEventListener('click',function(e){if(!rz.contains(e.target))ust(false)});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape')ust(false)});
+ if(window.matchMedia('(hover:hover) and (min-width:901px)').matches){var tm;rz.addEventListener('mouseenter',function(){clearTimeout(tm);ust(true)});rz.addEventListener('mouseleave',function(){tm=setTimeout(function(){ust(false)},180)})}
+ var linki=[].slice.call(document.querySelectorAll('.nav > a:not(.btn)')).filter(function(a){return a.getAttribute('href').charAt(0)==='#'});
+ var sekcje=linki.map(function(a){return document.querySelector(a.getAttribute('href'))});
+ function akt(){var y=window.scrollY+120,i=-1;sekcje.forEach(function(s,k){if(s&&s.offsetTop<=y)i=k});linki.forEach(function(a,k){a.classList.toggle('on',k===i)})}
+ window.addEventListener('scroll',akt,{passive:true});akt();
+ document.querySelectorAll('.karuzela').forEach(function(k){
+  var t=k.querySelector('.tor'),l=k.querySelector('.w-lewo'),p=k.querySelector('.w-prawo');
+  function krok(){var e=t.firstElementChild;return e?e.getBoundingClientRect().width+24:300}
+  function stan(){l.disabled=t.scrollLeft<4;p.disabled=t.scrollLeft+t.clientWidth>=t.scrollWidth-4}
+  l.onclick=function(){t.scrollBy({left:-krok(),behavior:'smooth'})};
+  p.onclick=function(){t.scrollBy({left:krok(),behavior:'smooth'})};
+  t.addEventListener('scroll',stan,{passive:true});window.addEventListener('resize',stan);stan();
+  var x0,s0,ruch=false;
+  t.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse')return;x0=e.clientX;s0=t.scrollLeft;ruch=false;
+   function mv(ev){var d=ev.clientX-x0;if(Math.abs(d)>5){ruch=true;t.classList.add('ciag')}t.scrollLeft=s0-d}
+   function up(){window.removeEventListener('pointermove',mv);window.removeEventListener('pointerup',up);
+    if(ruch){var w=krok();t.classList.remove('ciag');t.scrollTo({left:Math.round(t.scrollLeft/w)*w,behavior:'smooth'})}}
+   window.addEventListener('pointermove',mv);window.addEventListener('pointerup',up)});
+  t.addEventListener('dragstart',function(e){e.preventDefault()});
+ });
+ var fm=document.getElementById('formularz');if(fm)fm.addEventListener('submit',function(e){e.preventDefault();
+  if(this.querySelector('.ok'))return;var d=document.createElement('p');d.className='ok';
+  d.textContent='To podgląd strony, więc formularz niczego nie wysyła. Na docelowej stronie wiadomość trafi prosto na sylwia.cegiela@gmail.com.';this.appendChild(d)});
+})();
+</script>
+<script>
+(function(){
+ var W=[{"t": "Czy recenzowanie książek to tylko pasja? Podsumowanie Zlotu Niegrzecznych Pisarek", "d": "2026-11-23", "u": "https://www.kulturalnerozmowy.pl/2026/11/artyku-czy-recenzowanie-ksiazek-to.html", "dz": "artykuly-dzial", "p": ["artykuly"], "k": "Artykuły"}, {"t": "Ewa Ziemer: Sztuka pozwala mi oddychać", "d": "2026-11-10", "u": "https://www.kulturalnerozmowy.pl/2026/11/rozmowa-o-sztuce-ewa-ziemer-sztuka.html", "dz": "rozmowy", "p": ["o-sztuce"], "k": "Rozmowa o sztuce"}, {"t": "Karolina Dąbrowska: Nie chcę mówić kobietom, jakie powinny być", "d": "2026-11-06", "u": "https://www.kulturalnerozmowy.pl/2026/11/wywiad-goscinny-karolina-dabrowska-nie.html", "dz": "rozmowy", "p": ["z-ekspertem"], "k": "Rozmowa z ekspertem"}, {"t": "Anna-Maria Bentley: Przejrzałam Cię...", "d": "2026-10-29", "u": "https://www.kulturalnerozmowy.pl/2026/10/recenzja-ksiazki-anna-maria-bentley.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Iwona Gajda: Manipulacja karmi się naszym ego. Pytanie brzmi: jak się przed nią obronić?", "d": "2026-10-28", "u": "https://www.kulturalnerozmowy.pl/2026/10/rozmowa-o-ksiazce-iwona-gajda.html", "dz": "rozmowy", "p": ["o-ksiazkach"], "k": "Rozmowa o książkach"}, {"t": "Kulturalne Rozmowy patronem medialnym Zlotu Niegrzecznych Pisarek 2026", "d": "2026-10-24", "u": "https://www.kulturalnerozmowy.pl/2026/10/kulturalne-rozmowy-patronem-medialnym.html", "dz": "artykuly-dzial", "p": ["artykuly"], "k": "Artykuły"}, {"t": "Velvet Owl: Bicie serca, dreszcz, oddech to jesteśmy właśnie MY, z tego się składamy i czas wreszcie to zaakceptować", "d": "2026-10-24", "u": "https://www.kulturalnerozmowy.pl/2026/10/rozmowa-o-ksiazce-velvet-owl-bicie.html", "dz": "rozmowy", "p": ["o-ksiazkach"], "k": "Rozmowa o książkach"}, {"t": "Iwona Gajda: Hologramowy Świat III. Prawda", "d": "2026-10-24", "u": "https://www.kulturalnerozmowy.pl/2026/10/recenzja-ksiazki-iwona-gajda.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Marta Achtabowska: Alicja po drugiej stronie płótna", "d": "2026-10-24", "u": "https://www.kulturalnerozmowy.pl/2026/10/recenzja-ksiazki-marta-achtabowska.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Natasza Socha: Biblioteka wigilijnych wspomnień", "d": "2026-10-24", "u": "https://www.kulturalnerozmowy.pl/2026/10/recenzja-ksiazki-natasza-socha.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Robert F. Barkowski: Opowieści piastowskie. Tom 2.", "d": "2026-10-24", "u": "https://www.kulturalnerozmowy.pl/2026/10/recenzja-ksiazki.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Robert F. Barkowski: Opowieści piastowskie. Tom 1.", "d": "2026-10-24", "u": "https://www.kulturalnerozmowy.pl/2026/10/recenzja-ksiazki-robert-f-barkowski.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Tanya Valko: W kryminale nie kładzie się kawy na ławę", "d": "2026-10-15", "u": "https://www.kulturalnerozmowy.pl/2026/10/rozmowa-o-ksiazce-tanya-valko-w.html", "dz": "rozmowy", "p": ["o-ksiazkach"], "k": "Rozmowa o książkach"}, {"t": "Tanya Valko: Zbrodnia w hidżabie. Na książęcej farmie", "d": "2026-10-13", "u": "https://www.kulturalnerozmowy.pl/2026/10/recenzja-ksiazki-tanya-valko-zbrodnia-w.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "O literaturze, pasji i sile dialogu – moja rozmowa w Radiu \"Głos Literacki\"", "d": "2026-10-11", "u": "https://www.kulturalnerozmowy.pl/2026/10/rozmowa-radio-glos-literacki.html", "dz": "artykuly-dzial", "p": ["artykuly"], "k": "Artykuły"}, {"t": "Jak żyć bardziej po swojemu? 20 kobiet zabiera głos w wyjątkowym e-booku pod patronatem Kulturalnych Rozmów", "d": "2026-10-06", "u": "https://www.kulturalnerozmowy.pl/2026/10/jak-zyc-bardziej-po-swojemu-20-kobiet.html", "dz": "artykuly-dzial", "p": ["artykuly"], "k": "Artykuły"}, {"t": "Miłość, obsesja i świat, który nie potrafi się zmienić, czyli o \"Lalce\" Macieja Kawalskiego", "d": "2026-10-05", "u": "https://www.kulturalnerozmowy.pl/2026/10/recenzja-filmu-miosc-obsesja-i-swiat.html", "dz": "recenzje", "p": ["recenzje-filmow"], "k": "Recenzje filmów"}, {"t": "Velvet Owl: Pamiętniki dla niej. Słowa zapisane między jej udami", "d": "2026-09-28", "u": "https://www.kulturalnerozmowy.pl/2026/09/recenzja-ksiazki-velvet-owl-pamietniki.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Netflix zepsuł \"Lalkę\"? I bardzo dobrze. O serialu, który wkurza, uwodzi i nie przeprasza Prusa", "d": "2026-09-21", "u": "https://www.kulturalnerozmowy.pl/2026/09/recenzja-filmu-netflix-zepsu-lalke-i.html", "dz": "recenzje", "p": ["recenzje-filmow"], "k": "Recenzje filmów"}, {"t": "Laura Anna Tomczyk: Życie Kate", "d": "2026-09-17", "u": "https://www.kulturalnerozmowy.pl/2026/09/recenzja-ksiazki-laura-anna-tomczyk.html", "dz": "recenzje", "p": ["recenzje-ksiazek", "wyroznione"], "k": "Recenzje książek"}, {"t": "Łukasz Basta: Pustelnik. Więcej nas nie ma, niż jesteśmy", "d": "2026-09-17", "u": "https://www.kulturalnerozmowy.pl/2026/09/recenzja-ksiazki-ukasz-basta-pustelnik.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Alex.Gi: Boginistka", "d": "2026-09-17", "u": "https://www.kulturalnerozmowy.pl/2026/09/recenzja-ksiazki-alexgi-boginistka.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Erwin Mentel: Studentka", "d": "2026-09-17", "u": "https://www.kulturalnerozmowy.pl/2026/09/recenzja-ksiazki-erwin-mentel-studentka.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Anna Elf: Bądź grzeczna, będziesz miała wszystko", "d": "2026-09-01", "u": "https://www.kulturalnerozmowy.pl/2026/09/recenzja-ksiazki-anna-elf-badz-grzeczna.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Iwona Gajda: Hologramowy Świat III. Mądrość", "d": "2026-08-17", "u": "https://www.kulturalnerozmowy.pl/2026/08/recenzja-ksiazki-iwona-gajda.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Iwona Gajda: Myśli potrafią być zdradliwe, gdyż wyrastają z ego – jego żądz, pragnień i traum", "d": "2026-08-17", "u": "https://www.kulturalnerozmowy.pl/2026/08/rozmowa-o-ksiazce-iwona-gajda-mysli.html", "dz": "rozmowy", "p": ["o-ksiazkach"], "k": "Rozmowa o książkach"}, {"t": "Krzysztof P. Łabenda: Ojcostwo nie musi zawsze wynikać z biologii, a zaufanie dziecka jest darem największym", "d": "2026-07-31", "u": "https://www.kulturalnerozmowy.pl/2026/07/rozmowa-o-ksiazce-krzysztof-p-abenda.html", "dz": "rozmowy", "p": ["o-ksiazkach"], "k": "Rozmowa o książkach"}, {"t": "Krzysztof Piotr Łabenda: Grenouille reaktywacja", "d": "2026-07-28", "u": "https://www.kulturalnerozmowy.pl/2026/07/recenzja-ksiazki-krzysztof-piotr-abenda.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Anna B. Ignatowska: Maniusia", "d": "2026-07-15", "u": "https://www.kulturalnerozmowy.pl/2026/07/recenzja-ksiazki-anna-b-ignatowska.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Iwona Gajda: Hologramowy Świat II", "d": "2026-07-07", "u": "https://www.kulturalnerozmowy.pl/2026/07/recenzja-ksiazki-iwona-gajda.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Anna Solska: Czy to dzieje się naprawdę? Niezwyczajne historie zwyczajnych ludzi", "d": "2026-06-23", "u": "https://www.kulturalnerozmowy.pl/2026/06/recenzja-ksiazki-anna-solska-czy-to.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Anna-Maria Bentley: Tam, gdzie kończy się lęk", "d": "2026-06-23", "u": "https://www.kulturalnerozmowy.pl/2026/06/recenzja-ksiazki-anna-maria-bentley-tam.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Amelia M.: Koszmary Edynburga", "d": "2026-06-14", "u": "https://www.kulturalnerozmowy.pl/2026/06/recenzja-ksiazki-amelia-m-koszmary.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Kolory zła: \"Czerń\". Reż. Adrian Panek", "d": "2026-06-12", "u": "https://www.kulturalnerozmowy.pl/2026/06/recenzja-filmu-kolory-za-czern-rez.html", "dz": "recenzje", "p": ["recenzje-filmow"], "k": "Recenzje filmów"}, {"t": "Krzysztof Piotr Łabenda: Kawa. Baśń o psie innym niż wszystkie", "d": "2026-06-02", "u": "https://www.kulturalnerozmowy.pl/2026/06/recenzja-ksiazki-krzysztof-piotr-abenda.html", "dz": "recenzje", "p": ["recenzje-ksiazek", "wyroznione"], "k": "Recenzje książek"}, {"t": "Anna Solska: Bywa, że przegrana, staje się szansą", "d": "2026-05-19", "u": "https://www.kulturalnerozmowy.pl/2026/05/rozmowa-o-ksiazce-anna-solska-bywa-ze.html", "dz": "rozmowy", "p": ["o-ksiazkach"], "k": "Rozmowa o książkach"}, {"t": "Anna Solska: W drodze do światów nieznanych", "d": "2026-05-19", "u": "https://www.kulturalnerozmowy.pl/2026/05/recenzja-ksiazki-anna-solska-w-drodze.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Aleksandra Fila: Portale uczuć. Frekwencja 350. Tom 4", "d": "2026-05-19", "u": "https://www.kulturalnerozmowy.pl/2026/05/recenzja-ksiazki-aleksandra-fila.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Adam Gawłowski: Nadkobieta", "d": "2026-05-19", "u": "https://www.kulturalnerozmowy.pl/2026/05/recenzja-ksiazki-adam-gawowski.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Anna-Maria Bentley: Kiedy zgasną światła", "d": "2026-05-19", "u": "https://www.kulturalnerozmowy.pl/2026/05/recenzja-ksiazki-anna-maria-bentley.html", "dz": "recenzje", "p": ["recenzje-ksiazek", "wyroznione"], "k": "Recenzje książek"}, {"t": "Piter O'Braga: Klepsydra Kremla", "d": "2026-05-19", "u": "https://www.kulturalnerozmowy.pl/2026/05/recenzja-ksiazki-piter-obraga-klepsydra.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Norbert Żyła: Przestań robić wszystko na pokaz, zacznij żyć dla siebie", "d": "2026-04-27", "u": "https://www.kulturalnerozmowy.pl/2026/04/rozmowa-o-ksiazce-norbert-zya-przestan.html", "dz": "rozmowy", "p": ["o-ksiazkach"], "k": "Rozmowa o książkach"}, {"t": "Iwona Gajda: Hologramowy Świat III. Moralność", "d": "2026-03-31", "u": "https://www.kulturalnerozmowy.pl/2026/03/recenzja-ksiazki-iwona-gajda_31.html", "dz": "recenzje", "p": ["recenzje-ksiazek", "wyroznione"], "k": "Recenzje książek"}, {"t": "Iwona Gajda: Problem zaczyna się wtedy, gdy człowiek zwalnia się z osobistego wyboru i odpowiedzialności na rzecz tej przyjętej \"moralności\"", "d": "2026-03-31", "u": "https://www.kulturalnerozmowy.pl/2026/03/rozmowa-o-ksiazce-iwona-gajda-problem.html", "dz": "rozmowy", "p": ["o-ksiazkach"], "k": "Rozmowa o książkach"}, {"t": "Iwona Gajda: Ego to ludzka odsłona życia", "d": "2026-03-27", "u": "https://www.kulturalnerozmowy.pl/2026/03/rozmowa-o-ksiazce-iwona-gajda-ego-to.html", "dz": "rozmowy", "p": ["o-ksiazkach"], "k": "Rozmowa o książkach"}, {"t": "Aleksandra Gmyrek: Sekret nieudanych związków", "d": "2026-03-26", "u": "https://www.kulturalnerozmowy.pl/2026/03/recenzja-ksiazki-aleksandra-gmyrek.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Piter O’Braga: Tangram nazistów", "d": "2026-03-26", "u": "https://www.kulturalnerozmowy.pl/2026/03/recenzja-ksiazki-piter-obraga-tangram.html", "dz": "recenzje", "p": ["recenzje-ksiazek", "wyroznione"], "k": "Recenzje książek"}, {"t": "raven: Doktorze, poproszę coś mocniejszego", "d": "2026-03-23", "u": "https://www.kulturalnerozmowy.pl/2026/03/recenzja-ksiazki-raven-doktorze.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "\"Pojedynek\" reż. Łukasz Palkowski", "d": "2026-03-10", "u": "https://www.kulturalnerozmowy.pl/2026/03/recenzja-filmu-pojedynek-rez-ukasz.html", "dz": "recenzje", "p": ["recenzje-filmow"], "k": "Recenzje filmów"}, {"t": "Iwona Gajda: Hologramowy Świat I", "d": "2026-02-11", "u": "https://www.kulturalnerozmowy.pl/2026/02/recenzja-ksiazki-iwona-gajda.html", "dz": "recenzje", "p": ["recenzje-ksiazek", "wyroznione"], "k": "Recenzje książek"}, {"t": "Iwona Gajda: Technologia niczym krew napędza mój organizm i kieruje go ku przyszłości", "d": "2026-02-11", "u": "https://www.kulturalnerozmowy.pl/2026/02/rozmowa-o-ksiazce-iwona-gajda.html", "dz": "rozmowy", "p": ["o-ksiazkach"], "k": "Rozmowa o książkach"}, {"t": "Iwona Gajda: Hologramowy świat II. Myśli", "d": "2026-01-30", "u": "https://www.kulturalnerozmowy.pl/2026/01/recenzja-ksiazki-iwona-gajda.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Iwona Gajda: Myśli mogą być sprzymierzeńcem człowieka i wspierać go w osiąganiu szczęścia", "d": "2026-01-30", "u": "https://www.kulturalnerozmowy.pl/2026/01/rozmowa-o-ksiazce-iwona-gajda-mysli.html", "dz": "rozmowy", "p": ["o-ksiazkach"], "k": "Rozmowa o książkach"}, {"t": "Agata Czykierda-Grabowska: Przez milion burz", "d": "2026-01-28", "u": "https://www.kulturalnerozmowy.pl/2026/01/recenzja-ksiazki-agata-czykierda.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Małgorzata Micior: Powrozy", "d": "2026-01-22", "u": "https://www.kulturalnerozmowy.pl/2026/01/recenzja-ksiazki-magorzata-micior.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Natasza Socha: Zanim odlecą anioły", "d": "2025-10-16", "u": "https://www.kulturalnerozmowy.pl/2025/10/recenzja-ksiazki-natasza-socha-zanim.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Saudyjki odkryły, że jedyną skuteczną drogą emancypacji jest zdobycie wykształcenia", "d": "2025-10-14", "u": "https://www.kulturalnerozmowy.pl/2025/10/rozmowa-o-ksiazce-saudyjki-odkryy-ze.html", "dz": "rozmowy", "p": ["o-ksiazkach"], "k": "Rozmowa o książkach"}, {"t": "Olgierd Langer: Problem trzech miseczek", "d": "2025-10-13", "u": "https://www.kulturalnerozmowy.pl/2025/10/recenzja-ksiazki-olgierd-langer-problem.html", "dz": "recenzje", "p": ["recenzje-ksiazek", "wyroznione"], "k": "Recenzje książek"}, {"t": "Krzysztof P. Łabenda: Między cieniem a domem", "d": "2025-10-10", "u": "https://www.kulturalnerozmowy.pl/2025/10/recenzja-ksiazki-krzysztof-p-abenda.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Krzysztof Łabenda: \"Między cieniem a domem\" pozwoliło mi rzeczywiście na wyrzucenie z siebie tego, go gdzieś w duszy uwiera", "d": "2025-10-06", "u": "https://www.kulturalnerozmowy.pl/2025/10/rozmowa-o-ksiazce-krzysztof-abenda.html", "dz": "rozmowy", "p": ["o-ksiazkach"], "k": "Rozmowa o książkach"}, {"t": "Weronika Smith: Kiedy życie boli, uczę się iść dalej. Codziennie", "d": "2025-10-03", "u": "https://www.kulturalnerozmowy.pl/2025/10/recenzja-ksiazki-weronika-smith-prawda.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Katarzyna Wolwowicz: Śladami zatartych wspomnień", "d": "2025-09-25", "u": "https://www.kulturalnerozmowy.pl/2025/09/recenzja-ksiazki-katarzyna-wolwowicz_25.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Katarzyna Wolwowicz: Śladami twojej krwi", "d": "2025-09-25", "u": "https://www.kulturalnerozmowy.pl/2025/09/recenzja-ksiazki-katarzyna-wolwowicz.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Mateusz Winiecki: Europa umiera", "d": "2025-09-25", "u": "https://www.kulturalnerozmowy.pl/2025/09/recenzja-ksiazki-mateusz-winiecki.html", "dz": "recenzje", "p": ["recenzje-ksiazek", "wyroznione"], "k": "Recenzje książek"}, {"t": "Iwona Gajda: Intuicja jawi mi się jako most pomiędzy światem cielesnym a duchowym", "d": "2025-09-25", "u": "https://www.kulturalnerozmowy.pl/2025/09/rozmowa-o-ksiazce-iwona-gajda-intuicja.html", "dz": "rozmowy", "p": ["o-ksiazkach"], "k": "Rozmowa o książkach"}, {"t": "Iwona Gajda: Hologramowy Świat II. Intuicja", "d": "2025-09-25", "u": "https://www.kulturalnerozmowy.pl/2025/09/recenzja-ksiazki-iwona-gajda.html", "dz": "recenzje", "p": ["recenzje-ksiazek", "wyroznione"], "k": "Recenzje książek"}, {"t": "Paweł Piliszko: Satyra zawsze była orężem sztuki w walce z trudnościami", "d": "2025-09-23", "u": "https://www.kulturalnerozmowy.pl/2025/09/rozmowa-o-ksiazce-pawe-piliszko-satyra.html", "dz": "rozmowy", "p": ["o-ksiazkach"], "k": "Rozmowa o książkach"}, {"t": "Podróże z ITAKĄ – odkryj świat kultury, literatury i smaków", "d": "2025-09-19", "u": "https://www.kulturalnerozmowy.pl/2025/09/artyku-sponsorowany-podroze-z-itaka.html", "dz": "artykuly-dzial", "p": ["sponsorowane"], "k": "Artykuły sponsorowane"}, {"t": "Sylwia Koźluk: Serce Walecznika", "d": "2025-09-15", "u": "https://www.kulturalnerozmowy.pl/2025/09/recenzja-ksiazki-sylwia-kozluk-serce.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Natasza Socha: Kamienica pszczół", "d": "2025-08-27", "u": "https://www.kulturalnerozmowy.pl/2025/08/recenzja-ksiazki-natasza-socha.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Katarzyna Maludy: Wojenni kochankowie", "d": "2025-08-21", "u": "https://www.kulturalnerozmowy.pl/2025/08/recenzja-ksiazki-katarzyna-maludy.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Luiza Gallus: Traumy, lojalność, równowaga", "d": "2025-08-08", "u": "https://www.kulturalnerozmowy.pl/2025/08/recenzja-ksiazki-luiza-gallus-traumy.html", "dz": "recenzje", "p": ["recenzje-ksiazek", "wyroznione"], "k": "Recenzje książek"}, {"t": "Coliel Wilwarinen: Żółty Motyl", "d": "2025-08-08", "u": "https://www.kulturalnerozmowy.pl/2025/08/recenzja-ksiazki-coliel-wilwarinen.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Luiza Gallus: Przeszłość, która żyje w nas", "d": "2025-08-07", "u": "https://www.kulturalnerozmowy.pl/2025/08/recenzja-ksiazki-luiza-gallus-przeszosc.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Katarzyna Wolwowicz: Niewierna", "d": "2025-08-05", "u": "https://www.kulturalnerozmowy.pl/2025/08/recenzja-ksiazki-katarzyna-wolwowicz.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Anna Stryjewska: Dom to przestrzeń, gdzie można czuć się szczęśliwym i spełnionym", "d": "2025-08-04", "u": "https://www.kulturalnerozmowy.pl/2025/08/rozmowa-o-ksiazce-anna-stryjewska-dom.html", "dz": "rozmowy", "p": ["o-ksiazkach"], "k": "Rozmowa o książkach"}, {"t": "Eva Minge: Córka Agencji", "d": "2025-07-31", "u": "https://www.kulturalnerozmowy.pl/2025/07/recenzja-ksiazki-eva-minge-corka-agencji.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Rafał Glina: Zaszłość", "d": "2025-07-29", "u": "https://www.kulturalnerozmowy.pl/2025/07/recenzja-ksiazki-rafa-glina-zaszosc.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Natasza Socha: Obiecaj, że będziesz pić kawę o poranku", "d": "2025-07-28", "u": "https://www.kulturalnerozmowy.pl/2025/07/recenzja-ksiazki-natasza-socha-obiecaj.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}, {"t": "Przemek Osowski: Wrona z Madenfal", "d": "2025-07-28", "u": "https://www.kulturalnerozmowy.pl/2025/07/recenzja-ksiazki-przemek-osowski-wrona.html", "dz": "recenzje", "p": ["recenzje-ksiazek"], "k": "Recenzje książek"}],N={"recenzje": "Recenzje", "rozmowy": "Rozmowy", "artykuly-dzial": "Artykuły", "cykle": "Cykle tematyczne", "recenzje-ksiazek": "Recenzje książek", "recenzje-filmow": "Recenzje filmów", "wyroznione": "Wyróżnione recenzje", "o-ksiazkach": "Rozmowy o książkach", "o-muzyce": "Rozmowy o muzyce", "o-filmie": "Rozmowy o filmie", "o-sztuce": "Rozmowy o sztuce", "o-tancu": "Rozmowy o tańcu", "o-modzie": "Rozmowy o modzie", "o-sporcie": "Rozmowy o sporcie", "o-pasji": "Rozmowy o pasji", "o-wydarzeniach": "Rozmowy o wydarzeniach", "o-biznesie": "Rozmowy o biznesie", "z-ekspertem": "Rozmowy z ekspertem", "artykuly": "Artykuły", "goscinne": "Artykuły gościnne", "sponsorowane": "Artykuły sponsorowane", "polacy-na-emigracji": "Polacy na emigracji"},q=document.getElementById('q'),lista=document.getElementById('lista'),ile=document.getElementById('wyn-ile'),tyt=document.getElementById('wyn-tyt'),pusto=document.getElementById('pusto'),wycz=document.getElementById('wyczysc');
+ var st={dz:'',p:''},lim=15,wi=document.getElementById('wiecej');wi.onclick=function(){lim+=15;rys()};
+ function bez(s){return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/ł/g,'l')}
+ function data(s){var m=['stycznia','lutego','marca','kwietnia','maja','czerwca','lipca','sierpnia','września','października','listopada','grudnia'],p=s.split('-');return (+p[2])+' '+m[+p[1]-1]+' '+p[0]}
+ function rys(){
+  var f=bez(q.value.trim()),w=W.filter(function(x){
+   if(st.dz&&x.dz!==st.dz)return false;
+   if(st.p&&x.p.indexOf(st.p)<0)return false;
+   return !f||bez(x.t+' '+x.k).indexOf(f)>=0});
+  lista.innerHTML=w.slice(0,lim).map(function(x){return '<li><a href="'+x.u+'"><span class="kk">'+x.k+'</span><span class="tt">'+x.t.replace(/</g,'&lt;')+'</span><span class="dd">'+data(x.d)+'</span></a></li>'}).join('');
+  pusto.hidden=w.length>0;wi.hidden=w.length<=lim;
+  var nz=st.p?N[st.p]:(st.dz?N[st.dz]:'');
+  tyt.textContent=f?'Wyniki wyszukiwania':(nz||'Najnowsze teksty');
+  ile.textContent=w.length+(w.length===1?' tekst':(w.length%10>=2&&w.length%10<=4&&(w.length%100<10||w.length%100>=20)?' teksty':' tekstów'));
+  wycz.hidden=!(f||st.dz||st.p);
+  document.querySelectorAll('.chipy button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.dz===st.dz&&!st.p?'true':(b.dataset.dz===st.dz&&st.dz!==''?'true':'false'))});
+  document.querySelectorAll('.dzialy li button').forEach(function(b){b.classList.toggle('on',b.dataset.p===st.p)});
+ }
+ function ustaw(dz,p,przewin){st.dz=dz;st.p=p;lim=15;rys();if(przewin)document.querySelector('.wyniki').scrollIntoView({behavior:'smooth'})}
+ document.querySelectorAll('.chipy button').forEach(function(b){b.onclick=function(){ustaw(b.dataset.dz,'')}});
+ document.querySelectorAll('.dzialy h2 button').forEach(function(b){b.onclick=function(){ustaw(b.dataset.dz,'',true);history.replaceState(null,'','#'+b.dataset.dz)}});
+ document.querySelectorAll('.dzialy li button').forEach(function(b){b.onclick=function(){var dz=b.closest('div').querySelector('h2 button').dataset.dz;ustaw(dz,b.dataset.p,true);history.replaceState(null,'','#'+b.dataset.p)}});
+ wycz.onclick=function(){q.value='';ustaw('','');history.replaceState(null,'',location.pathname)};
+ q.addEventListener('input',function(){lim=15;rys()});
+ function zHash(){var h=decodeURIComponent(location.hash.slice(1));if(!h||h==='szukaj'){rys();if(h==='szukaj')setTimeout(function(){q.focus()},300);return}
+  var el=document.getElementById(h);if(!el){rys();return}
+  if(el.dataset.p){ustaw(el.closest('div').querySelector('h2 button').dataset.dz,h,true)}else if(el.dataset.dz){ustaw(h,'',true)}}
+ window.addEventListener('hashchange',zHash);zHash();
+})();
+</script>
+</body>
+</html>
