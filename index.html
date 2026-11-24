@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow" data-podglad>
+<title>Recenzje książek i wywiady z autorami | Kulturalne Rozmowy - Sylwia Cegieła</title>
+<meta name="description" content="Kulturalne Rozmowy - portal literacko-kulturalny od 2015 roku. Analityczne recenzje książek, pogłębione wywiady z autorami, patronaty medialne. Sylwia Cegieła, polonistka i dziennikarka literacka.">
+<link rel="preload" href="fonts/fraunces-rdzen.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/figtree-rdzen.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="img/hero-1024.webp" imagesrcset="img/hero-640.webp 640w, img/hero-1024.webp 1024w, img/hero-1600.webp 1600w, img/hero-2047.webp 2047w" imagesizes="(min-width: 900px) 72vw, 100vw">
+<style>
+@font-face{font-family:"Fraunces";font-weight:300 800;font-display:swap;src:url(fonts/fraunces-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AB,U+00B0,U+00B7,U+00BB,U+00D3,U+00F3,U+2013-2014,U+2018-2019,U+201C-201E,U+2022,U+2026}
+@font-face{font-family:"Fraunces";font-weight:300 800;font-display:swap;src:url(fonts/fraunces-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+@font-face{font-family:"Figtree";font-weight:400 700;font-display:swap;src:url(fonts/figtree-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AB,U+00B0,U+00B7,U+00BB,U+00D3,U+00F3,U+2013,U+2018-2019,U+201C-201E,U+2022,U+2026}
+@font-face{font-family:"Figtree";font-weight:400 700;font-display:swap;src:url(fonts/figtree-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+:root{--ink:#151214;--ink2:#3d3639;--szary:#F3F3F6;--linia:#dedde3;--roz:#F9B9E2;--mal:#B8287F;--mal2:#9a1f69;--w:1200px;--hd:74px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--hd) + 8px)}
+body{margin:0;font-family:"Figtree",system-ui,sans-serif;font-size:17px;line-height:1.65;color:var(--ink);background:#fff;-webkit-text-size-adjust:100%}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--mal)}
+h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:560;line-height:1.12;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(30px,4.2vw,50px)}
+h3{font-size:22px;font-weight:600}
+p{margin:0 0 1em}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;background:var(--mal);color:#fff;font-weight:600;font-size:17px;text-decoration:none;border:0;border-radius:4px;cursor:pointer;transition:background .2s}
+.btn:hover{background:var(--mal2)}
+.btn svg{width:22px;height:12px}
+
+/* naglowek */
+.hd{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--linia);height:var(--hd)}
+.hd .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;max-width:1360px}
+.logo img{height:56px;width:auto}
+.nav{display:flex;gap:28px;align-items:center}
+.nav a{color:var(--ink);text-decoration:none;font-size:16px;font-weight:500;padding:6px 0;border-bottom:2px solid transparent}
+.nav a:hover{border-color:var(--roz)}
+.nav a.on{border-color:var(--mal)}
+.nav .btn{min-height:44px;padding:0 20px;color:#fff;border:0;font-size:15px}
+.burger{display:none;background:none;border:0;width:48px;height:48px;padding:12px;cursor:pointer}
+.burger span{display:block;height:2px;background:var(--ink);margin:6px 0;transition:transform .2s,opacity .2s}
+
+/* pierwszy ekran */
+.hero{position:relative;background:var(--ink);color:#fff;min-height:calc(100svh - var(--hd));max-height:1000px;display:flex;align-items:center;overflow:hidden}
+.hero .foto{position:absolute;top:0;bottom:0;right:0;left:28%}
+.hero .foto img{width:100%;height:100%;object-fit:cover;object-position:50% 32%}
+.hero .foto::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--ink) 0%,rgba(21,18,20,.86) 16%,rgba(21,18,20,.25) 46%,rgba(21,18,20,0) 62%)}
+.hero .tresc{position:relative;max-width:1360px;width:100%;margin:0 auto;padding:clamp(28px,5vh,56px) 24px}
+.hero .kol{max-width:600px}
+.hero .kto{font-size:16px;color:#f3d6e8;margin:0 0 22px}
+.hero h1{font-size:clamp(34px,min(4.6vw,6.4vh),62px);margin:0 0 22px}
+.hero .lead{font-size:clamp(17px,1.4vw,20px);color:#ece8ea;max-width:520px;margin:0 0 32px}
+.galazka{display:block;width:150px;height:auto;margin:0 0 26px}
+.hero .galazka{width:170px;margin:0 0 clamp(12px,2.4vh,26px)}
+
+/* separator z galazka */
+.sep{display:flex;align-items:center;gap:0;margin:0 0 34px}
+.sep::before{content:"";flex:0 0 56px;height:1px;background:var(--ink)}
+.sep svg{width:64px;height:24px;margin-left:-2px}
+
+section{padding:96px 0}
+.szare{background:var(--szary)}
+.pyt{max-width:780px;margin-bottom:40px}
+.pyt p{font-size:19px;color:var(--ink2);margin-top:18px}
+
+/* tematy */
+.tematy{display:flex;flex-wrap:wrap;gap:10px 26px;margin:0 0 56px;padding:22px 0;border-top:1px solid var(--linia);border-bottom:1px solid var(--linia)}
+.tematy a{color:var(--ink);text-decoration:none;font-size:17px}
+.tematy a:hover{color:var(--mal)}
+
+/* karuzele */
+.karuzela{position:relative}
+.tor{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:4px;cursor:grab;-webkit-overflow-scrolling:touch}
+.tor::-webkit-scrollbar{display:none}
+.tor.ciag{cursor:grabbing;scroll-snap-type:none}
+.tor.ciag a{pointer-events:none}
+.strz{display:flex;gap:10px;justify-content:flex-end;margin-top:22px}
+.strz button{width:48px;height:48px;border:1px solid var(--ink);background:#fff;border-radius:50%;cursor:pointer;display:grid;place-items:center}
+.strz button:hover{background:var(--ink)}
+.strz button:hover path{stroke:#fff}
+.strz button:disabled{opacity:.3;cursor:default;background:#fff}
+.strz button:disabled path{stroke:var(--ink)}
+.strz svg{width:20px;height:14px}
+.wpis{flex:0 0 calc((100% - 48px)/3);scroll-snap-align:start;text-decoration:none;color:var(--ink);background:#fff}
+.wpis .ob{aspect-ratio:4/3;overflow:hidden;background:var(--szary)}
+.wpis .ob img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.wpis:hover .ob img{transform:scale(1.03)}
+.wpis .op{padding:20px 2px 0}
+.wpis .kat{font-size:14px;color:var(--mal);font-weight:600;margin:0 0 6px}
+.wpis h3{font-size:22px;margin:0 0 10px}
+.wpis .data{font-size:14px;color:#6b6468}
+
+/* o mnie */
+.omnie{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:72px;align-items:center}
+.omnie figure{margin:0;position:relative;max-width:512px}
+.omnie figure img{width:100%;aspect-ratio:1;object-fit:cover}
+.omnie figcaption{font-size:14px;color:#6b6468;margin-top:10px}
+.omnie .podpis{font-family:"Fraunces",serif;font-size:21px;margin-top:8px}
+.okladki{border-left:2px solid var(--roz);padding:4px 0 4px 20px;margin:26px 0;color:var(--ink2)}
+
+/* wspolpraca */
+.ciemne{background:var(--ink);color:#fff}
+.ciemne .sep::before{background:#fff}
+.ciemne .pyt p{color:#d9d3d6}
+.oferta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 72px;margin-top:8px}
+.oferta div{padding:30px 0;border-top:1px solid rgba(255,255,255,.18)}
+.oferta h3{font-size:25px;margin:0 0 10px}
+.oferta p{color:#d9d3d6;margin:0}
+.proces{margin-top:56px;padding:34px 0 0;border-top:1px solid rgba(255,255,255,.18);display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:48px;align-items:start}
+.proces ol{margin:0;padding-left:22px;color:#e8e3e6}
+.proces li{margin:0 0 10px;padding-left:6px}
+.proces li::marker{color:var(--roz);font-family:"Fraunces",serif;font-weight:600}
+.ciemne .btn{margin-top:26px}
+
+/* opinie */
+.opinia{flex:0 0 calc((100% - 48px)/3);scroll-snap-align:start;background:var(--szary);padding:34px 30px 30px;display:flex;flex-direction:column}
+.opinia svg{width:38px;height:30px;margin-bottom:16px}
+.opinia blockquote{margin:0 0 22px;font-family:"Fraunces",serif;font-size:20px;line-height:1.45;font-weight:420;flex:1}
+.opinia .kto{font-weight:600}
+.opinia .kto span{display:block;font-weight:400;color:#6b6468;font-size:15px}
+
+/* na zywo */
+.live{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:56px;align-items:start}
+.lista{list-style:none;margin:0;padding:0;border-top:1px solid var(--linia)}
+.lista li{border-bottom:1px solid var(--linia)}
+.lista a{display:flex;justify-content:space-between;gap:24px;padding:20px 0;color:var(--ink);text-decoration:none;font-size:18px}
+.lista a:hover{color:var(--mal)}
+.lista a span{color:#6b6468;font-size:15px;white-space:nowrap}
+.profile{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:26px}
+.profile a{color:var(--ink);font-weight:500}
+
+/* kontakt */
+.kontakt{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:72px;align-items:start}
+.mail{font-family:"Fraunces",serif;font-size:clamp(22px,2.4vw,30px);color:var(--ink);text-decoration:none;border-bottom:2px solid var(--roz);word-break:break-all}
+.mail:hover{border-color:var(--mal)}
+form{display:grid;gap:16px}
+.dwa{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:block;font-size:15px;font-weight:600;margin-bottom:6px}
+input,select,textarea{width:100%;font:inherit;font-size:17px;padding:13px 14px;border:1px solid #c9c6cd;border-radius:4px;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--mal);outline-offset:1px;border-color:var(--mal)}
+textarea{min-height:140px;resize:vertical}
+.info{font-size:15px;color:#6b6468;margin:0}
+.ok{background:var(--szary);border-left:3px solid var(--mal);padding:14px 16px;font-size:16px}
+
+/* stopka */
+.ft{background:var(--szary);padding:64px 0 28px;font-size:15px}
+.ft .kol{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.ft h4{font-family:"Fraunces",serif;font-size:18px;font-weight:600;margin:0 0 12px}
+.ft ul{list-style:none;margin:0;padding:0}
+.ft li{margin:0 0 7px}
+.ft a{color:var(--ink);text-decoration:none}
+.ft a:hover{color:var(--mal)}
+.ft .logo img{height:64px;margin-bottom:14px}
+.ft .dol{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:44px;padding-top:22px;border-top:1px solid var(--linia);color:#5d575a}
+.wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
+.wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
+.wylinka-badge:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.wylinka-badge svg{width:18px;height:18px;flex:none;overflow:visible}
+.wylinka-badge b{font-weight:600}
+.wylinka-badge .wy-old{opacity:.45;transform-origin:40px 30px;transition:transform .32s cubic-bezier(.3,.7,.4,1),opacity .32s ease-out}
+.wylinka-badge .wy-pod{opacity:0;transition:opacity .2s ease-out .08s}
+.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
+.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
+@media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
+
+@media (max-width:1100px){
+ .nav{gap:20px}
+ .wpis,.opinia{flex-basis:calc((100% - 24px)/2)}
+}
+@media (max-width:900px){
+ :root{--hd:62px}
+ .logo img{height:44px}
+ .burger{display:block}
+ .nav{position:fixed;top:var(--hd);left:0;right:0;bottom:0;background:#fff;flex-direction:column;align-items:flex-start;gap:0;padding:12px 24px 32px;transform:translateX(100%);transition:transform .25s;overflow:auto}
+ .nav a{font-family:"Fraunces",serif;font-size:26px;padding:14px 0;width:100%;border-bottom:1px solid var(--linia)}
+ .nav .btn{margin-top:22px;font-family:"Figtree",sans-serif;font-size:17px;min-height:52px;width:100%}
+ .menu-otw .nav{transform:none}
+ .menu-otw .burger span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+ .menu-otw .burger span:nth-child(2){opacity:0}
+ .menu-otw .burger span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+ .hero{align-items:flex-end;max-height:none}
+ .hero .foto{left:0;bottom:auto;height:64%}
+ .hero .foto img{object-position:50% 30%}
+ .hero .foto::after{background:linear-gradient(180deg,rgba(21,18,20,0) 40%,rgba(21,18,20,.6) 72%,var(--ink) 100%)}
+ .hero .tresc{padding:38svh 20px 26px}
+ .hero .galazka{display:none}
+ .hero .kto{font-size:15px;margin-bottom:12px}
+ .hero h1{margin-bottom:14px}
+ .hero .lead{margin-bottom:24px}
+ section{padding:68px 0}
+ .omnie,.kontakt,.proces,.live{grid-template-columns:1fr;gap:36px}
+ .oferta{grid-template-columns:1fr}
+ .ft .kol{grid-template-columns:1fr 1fr}
+ .ft .kol>div:first-child{grid-column:1/-1}
+}
+@media (max-width:600px){
+ body{font-size:16px}
+ .wrap{padding:0 20px}
+ .wpis,.opinia{flex-basis:84%}
+ .pyt p{font-size:17px}
+ .dwa{grid-template-columns:1fr}
+ .hero h1{font-size:31px}
+ .hero .lead{font-size:16px;line-height:1.55}
+ .btn{width:100%}
+ .lista a{flex-direction:column;gap:2px;font-size:17px}
+}
+@media (max-width:600px) and (max-height:700px){
+ .hero .tresc{padding-top:30svh}
+ .hero h1{font-size:27px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <symbol id="kwiat" viewBox="0 0 64 24"><path d="M0 18 C14 18 24 16 34 12" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M34 12 C38 4 46 2 50 6 C46 8 40 10 34 12Z" fill="#F9B9E2" stroke="#151214" stroke-width="1.1"/><path d="M34 12 C42 8 52 10 56 16 C50 18 41 16 34 12Z" fill="#F9B9E2" stroke="#151214" stroke-width="1.1"/><path d="M34 12 C38 13 44 18 44 23 C39 21 35 17 34 12Z" fill="#F9B9E2" stroke="#151214" stroke-width="1.1"/><path d="M22 15.5 C24 11 28 10 30 11 C28 13 25 14.5 22 15.5Z" fill="#F9B9E2" stroke="#151214" stroke-width="1"/></symbol>
+ <symbol id="strz" viewBox="0 0 22 12"><path d="M0 6h20M15 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+</svg>
+
+<header class="hd" id="gora">
+ <div class="wrap">
+  <a class="logo" href="#gora" aria-label="Kulturalne Rozmowy - strona główna"><img src="img/logo.webp" width="400" height="203" alt="Kulturalne Rozmowy"></a>
+  <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+  <nav class="nav" id="nav">
+   <a href="#teksty">Recenzje i wywiady</a>
+   <a href="#o-mnie">O mnie</a>
+   <a href="#wspolpraca">Współpraca</a>
+   <a href="#opinie">Opinie</a>
+   <a href="#na-zywo">Na żywo</a>
+   <a class="btn" href="#kontakt">Kontakt</a>
+  </nav>
+ </div>
+</header>
+
+<main>
+<section class="hero" style="padding:0">
+ <div class="foto"><img src="img/hero-2047.webp" srcset="img/hero-640.webp 640w, img/hero-1024.webp 1024w, img/hero-1600.webp 1600w, img/hero-2047.webp 2047w" sizes="(min-width: 900px) 72vw, 100vw" width="2047" height="2048" alt="Sylwia Cegieła, twórczyni portalu Kulturalne Rozmowy" fetchpriority="high"></div>
+ <div class="tresc">
+  <div class="kol">
+   <svg class="galazka" viewBox="0 0 64 24" style="color:#fff" aria-hidden="true"><use href="#kwiat"/></svg>
+   <p class="kto">Sylwia Cegieła, portal literacki od 2015 roku</p>
+   <h1>Recenzje książek i wywiady z autorami&nbsp;- literatura, od której zaczyna się rozmowa</h1>
+   <p class="lead">Jestem polonistką i dziennikarką literacką. Piszę analityczne recenzje i prowadzę szczere, pogłębione rozmowy z autorami.</p>
+   <a class="btn" href="#wspolpraca">Zamów recenzję lub wywiad <svg aria-hidden="true"><use href="#strz"/></svg></a>
+  </div>
+ </div>
+</section>
+
+<section id="teksty">
+ <div class="wrap">
+  <div class="sep" aria-hidden="true"><svg><use href="#kwiat"/></svg></div>
+  <div class="pyt">
+   <h2>O czym tu rozmawiamy?</h2>
+   <p>O książkach, ale nie tylko. Recenzje literatury obyczajowej i psychologicznej, rozmowy z pisarzami, artystami i ekspertami, a obok nich historie zwykłych ludzi z pasją i cykl o Polakach na emigracji.</p>
+  </div>
+  <div class="tematy">
+   <a href="https://www.kulturalnerozmowy.pl/search/label/recenzja">Recenzje książek</a>
+   <a href="https://www.kulturalnerozmowy.pl/search/label/rozmowa%20o%20ksi%C4%85%C5%BCce">Rozmowy o książkach</a>
+   <a href="https://www.kulturalnerozmowy.pl/search/label/artyku%C5%82">Artykuły</a>
+   <a href="https://www.kulturalnerozmowy.pl/search/label/rozmowa%20o%20filmie">Film</a>
+   <a href="https://www.kulturalnerozmowy.pl/search/label/rozmowa%20o%20modzie">Moda</a>
+   <a href="https://www.kulturalnerozmowy.pl/search/label/rozmowa%20o%20biznesie">Biznes</a>
+   <a href="https://www.kulturalnerozmowy.pl/search/label/Polacy%20na%20emigracji">Polacy na emigracji</a>
+  </div>
+  <div class="karuzela">
+   <div class="tor" tabindex="0" aria-label="Najnowsze teksty">
+    <a class="wpis" href="https://www.kulturalnerozmowy.pl/2026/11/artyku-czy-recenzowanie-ksiazek-to.html">
+     <div class="ob"><img src="img/zlot-800.webp" srcset="img/zlot-480.webp 480w, img/zlot-800.webp 800w" sizes="(max-width:600px) 84vw, (max-width:1100px) 46vw, 380px" width="800" height="450" alt="Grafika do artykułu o Zlocie Niegrzecznych Pisarek" loading="lazy" decoding="async"></div>
+     <div class="op"><p class="kat">Artykuł</p><h3>Czy recenzowanie książek to tylko pasja? Podsumowanie Zlotu Niegrzecznych Pisarek</h3><p class="data">23 listopada 2026</p></div>
+    </a>
+    <a class="wpis" href="https://www.kulturalnerozmowy.pl/2026/11/rozmowa-o-sztuce-ewa-ziemer-sztuka.html">
+     <div class="ob"><img src="img/ziemer-800.webp" srcset="img/ziemer-480.webp 480w, img/ziemer-800.webp 800w" sizes="(max-width:600px) 84vw, (max-width:1100px) 46vw, 380px" width="800" height="447" alt="Ewa Ziemer" loading="lazy" decoding="async"></div>
+     <div class="op"><p class="kat">Rozmowa o sztuce</p><h3>Ewa Ziemer: Sztuka pozwala mi oddychać</h3><p class="data">10 listopada 2026</p></div>
+    </a>
+    <a class="wpis" href="https://www.kulturalnerozmowy.pl/2026/11/wywiad-goscinny-karolina-dabrowska-nie.html">
+     <div class="ob"><img src="img/dabrowska-800.webp" srcset="img/dabrowska-480.webp 480w, img/dabrowska-800.webp 800w" sizes="(max-width:600px) 84vw, (max-width:1100px) 46vw, 380px" width="800" height="423" alt="Karolina Dąbrowska" loading="lazy" decoding="async"></div>
+     <div class="op"><p class="kat">Rozmowa z ekspertem</p><h3>Karolina Dąbrowska: Nie chcę mówić kobietom, jakie powinny być</h3><p class="data">6 listopada 2026</p></div>
+    </a>
+    <a class="wpis" href="https://www.kulturalnerozmowy.pl/2026/10/recenzja-ksiazki-anna-maria-bentley.html">
+     <div class="ob"><img src="img/bentley-800.webp" srcset="img/bentley-480.webp 480w, img/bentley-800.webp 800w" sizes="(max-width:600px) 84vw, (max-width:1100px) 46vw, 380px" width="800" height="1000" alt="Okładka książki Przejrzałam Cię Anny-Marii Bentley" loading="lazy" decoding="async"></div>
+     <div class="op"><p class="kat">Recenzja książki</p><h3>Anna-Maria Bentley: Przejrzałam Cię...</h3><p class="data">29 października 2026</p></div>
+    </a>
+   </div>
+   <div class="strz"><button class="w-lewo" aria-label="Poprzednie"><svg style="transform:scaleX(-1)"><use href="#strz"/></svg></button><button class="w-prawo" aria-label="Następne"><svg><use href="#strz"/></svg></button></div>
+  </div>
+ </div>
+</section>
+
+<section class="szare" id="o-mnie">
+ <div class="wrap omnie">
+  <figure><img src="img/lektura-1024.webp" srcset="img/lektura-480.webp 480w, img/lektura-800.webp 800w, img/lektura-1024.webp 1024w" sizes="(max-width:900px) 92vw, 460px" width="1024" height="1024" alt="Otwarta książka i różowe okulary wśród białych kwiatów" loading="lazy" decoding="async"></figure>
+  <div>
+   <div class="sep" aria-hidden="true"><svg><use href="#kwiat"/></svg></div>
+   <h2>Kim jestem?</h2>
+   <p style="margin-top:22px;font-size:19px">Nazywam się Sylwia Cegieła. Od 2015 roku zawodowo zajmuję się dziennikarstwem literackim, analizą literatury i prowadzeniem pogłębionych wywiadów. Z wykształcenia jestem polonistką.</p>
+   <p>Recenzja jest dla mnie formą interpretacji i dialogu z tekstem, a nie szybkim werdyktem. Zwracam uwagę na konstrukcję narracji, psychologię bohaterów i kontekst społeczny. Wywiad traktuję podobnie: jako spotkanie oparte na uważnym słuchaniu i zaufaniu.</p>
+   <p class="okladki">Fragmenty moich recenzji i wywiadów trafiły na okładki książek, m.in. "Bezimiennych" i "Niedotykalnych" Iwony Gajdy, "Obietnicy" Ewy Pirce i "Głęboko pod powierzchnią" Konrada Makarewicza.</p>
+   <p>Zaufało mi już ponad 400 gości, a portal objął patronatem medialnym ponad 100 tytułów.</p>
+   <p class="podpis">Sylwia Cegieła</p>
+  </div>
+ </div>
+</section>
+
+<section class="ciemne" id="wspolpraca">
+ <div class="wrap">
+  <div class="sep" aria-hidden="true"><svg style="color:#fff"><use href="#kwiat"/></svg></div>
+  <div class="pyt">
+   <h2>Co mogę zrobić dla Twojej książki?</h2>
+   <p>Współpracuję z autorami i wydawcami, z debiutantami i ze znanymi nazwiskami. Recenzję, wywiad i promocję dostajesz w jednym miejscu.</p>
+  </div>
+  <div class="oferta">
+   <div><h3>Recenzja książki</h3><p>Autorska, analityczna i szczera. Pokazuje mocne strony i to, co mniej udane, w kontekście społecznym i kulturowym. Przygotowana pod wyszukiwarki.</p></div>
+   <div><h3>Wywiad z autorem</h3><p>Pogłębiona rozmowa, która pozwala opowiedzieć historię z własnej perspektywy. Debiutanta przedstawia szerszej publiczności, znaną osobę pokazuje w nowym świetle.</p></div>
+   <div><h3>Patronat medialny</h3><p>Rekomendacja portalu, promocja w mediach społecznościowych, recenzja i rozmowa z autorem. Lista objętych patronatem tytułów jest na stronie.</p></div>
+   <div><h3>Artykuł sponsorowany i wywiad wizerunkowy</h3><p>Wzmianka o tytule w artykule okolicznościowym albo rozmowa budująca wizerunek autora, eksperta lub marki.</p></div>
+  </div>
+  <div class="proces">
+   <h3 style="font-size:30px">Jak wygląda współpraca?</h3>
+   <div>
+    <ol>
+     <li>Wysyłasz tekst książki i piszesz, jakiej usługi potrzebujesz.</li>
+     <li>Dostajesz ode mnie ofertę. Po jej akceptacji zabieram się do lektury.</li>
+     <li>Otrzymujesz link do opublikowanej recenzji lub wywiadu. Standardowo recenzja jest gotowa w 7-14 dni roboczych od otrzymania materiałów.</li>
+     <li>Dbam o promocję tekstu i książki w moich kanałach.</li>
+    </ol>
+    <a class="btn" href="#kontakt">Napisz, o jaką książkę chodzi <svg aria-hidden="true"><use href="#strz"/></svg></a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="opinie">
+ <div class="wrap">
+  <div class="sep" aria-hidden="true"><svg><use href="#kwiat"/></svg></div>
+  <div class="pyt"><h2>Co mówią moi rozmówcy?</h2></div>
+  <div class="karuzela">
+   <div class="tor" tabindex="0" aria-label="Opinie rozmówców">
+    <figure class="opinia" style="margin:0"><svg viewBox="0 0 38 30" aria-hidden="true"><path d="M0 30V17C0 7 6 1 16 0v6c-5 1-8 5-8 10h8v14zM22 30V17c0-10 6-16 16-17v6c-5 1-8 5-8 10h8v14z" fill="#F9B9E2"/></svg><blockquote>Pytania, które do mnie dotarły okazały się (a tego trochę się bałem) zupełnie wolne od banału.</blockquote><figcaption class="kto">Krzysztof P. Łabenda<span>pisarz</span></figcaption></figure>
+    <figure class="opinia" style="margin:0"><svg viewBox="0 0 38 30" aria-hidden="true"><path d="M0 30V17C0 7 6 1 16 0v6c-5 1-8 5-8 10h8v14zM22 30V17c0-10 6-16 16-17v6c-5 1-8 5-8 10h8v14z" fill="#F9B9E2"/></svg><blockquote>Bardzo cenię profesjonalizm, a Pani Sylwia na pewno jest profesjonalistką w tym, co robi. Gorąco polecam współpracę z Kulturalnymi Rozmowami.</blockquote><figcaption class="kto">Anna Sakowicz<span>pisarka</span></figcaption></figure>
+    <figure class="opinia" style="margin:0"><svg viewBox="0 0 38 30" aria-hidden="true"><path d="M0 30V17C0 7 6 1 16 0v6c-5 1-8 5-8 10h8v14zM22 30V17c0-10 6-16 16-17v6c-5 1-8 5-8 10h8v14z" fill="#F9B9E2"/></svg><blockquote>Wywiad przebiegł w miłej atmosferze. Pytania były ciekawe i dociekliwe. Widać było, że dobrze przygotowała się do tej rozmowy.</blockquote><figcaption class="kto">Anka Mrówczyńska<span>pisarka</span></figcaption></figure>
+    <figure class="opinia" style="margin:0"><svg viewBox="0 0 38 30" aria-hidden="true"><path d="M0 30V17C0 7 6 1 16 0v6c-5 1-8 5-8 10h8v14zM22 30V17c0-10 6-16 16-17v6c-5 1-8 5-8 10h8v14z" fill="#F9B9E2"/></svg><blockquote>Rozmowa okazała się prawdziwą przyjemnością. Przygotowana profesjonalnie, z wielką starannością i wiedzą o mnie.</blockquote><figcaption class="kto">Lidia Tasarz<span>pisarka</span></figcaption></figure>
+   </div>
+   <div class="strz"><button class="w-lewo" aria-label="Poprzednie"><svg style="transform:scaleX(-1)"><use href="#strz"/></svg></button><button class="w-prawo" aria-label="Następne"><svg><use href="#strz"/></svg></button></div>
+  </div>
+ </div>
+</section>
+
+<section class="szare" id="na-zywo">
+ <div class="wrap live">
+  <div>
+   <div class="sep" aria-hidden="true"><svg><use href="#kwiat"/></svg></div>
+   <h2>Gdzie jeszcze rozmawiamy?</h2>
+   <p style="margin-top:20px;font-size:18px;color:var(--ink2)">Na żywo na YouTube: o książkach, rynku wydawniczym i o tym, co nosimy w środku. Recenzje znajdziesz też na moich profilach czytelniczych.</p>
+   <div class="profile">
+    <a href="https://www.youtube.com/@sylwiacegiela">YouTube</a>
+    <a href="https://www.instagram.com/sylwiacegiela/">Instagram</a>
+    <a href="https://www.facebook.com/portalkulturalnerozmowy/">Facebook</a>
+    <a href="https://www.tiktok.com/@sylwiacegiela">TikTok</a>
+    <a href="https://lubimyczytac.pl/profil/1784378/sylwiacegiela">Lubimy Czytać</a>
+    <a href="https://nakanapie.pl/sylwiacegiela">Na Kanapie</a>
+   </div>
+  </div>
+  <ul class="lista">
+   <li><a href="https://www.youtube.com/@sylwiacegiela">Czy sprzedajemy książkę, czy autora <span>Live z Roksaną Samagalską</span></a></li>
+   <li><a href="https://www.youtube.com/@sylwiacegiela">Netflix zbezczelnił "Lalkę"? Bohaterowie i Prus, których nie znacie <span>Live z Krystyną Bezubik</span></a></li>
+   <li><a href="https://www.youtube.com/@sylwiacegiela">Czy można kochać własną matkę i jednocześnie chcieć od niej odejść? <span>Live z Laurą Tomczyk</span></a></li>
+   <li><a href="https://www.youtube.com/@sylwiacegiela">Dziecko kupuje cierpienia dorosłych. Co naprawdę nosimy w środku? <span>Live z Gabrielem Cebratem</span></a></li>
+  </ul>
+ </div>
+</section>
+
+<section id="kontakt">
+ <div class="wrap kontakt">
+  <div>
+   <div class="sep" aria-hidden="true"><svg><use href="#kwiat"/></svg></div>
+   <h2>Porozmawiamy?</h2>
+   <p style="margin:22px 0 26px;font-size:18px;color:var(--ink2)">Napisz w sprawie recenzji, patronatu, promocji książki albo jeśli masz ciekawą historię do opowiedzenia.</p>
+   <a class="mail" href="mailto:sylwia.cegiela@gmail.com">sylwia.cegiela@gmail.com</a>
+  </div>
+  <form id="formularz" novalidate>
+   <div class="dwa">
+    <div><label for="f-imie">Imię i nazwisko</label><input id="f-imie" name="imie" autocomplete="name"></div>
+    <div><label for="f-mail">E-mail</label><input id="f-mail" name="mail" type="email" autocomplete="email"></div>
+   </div>
+   <div class="dwa">
+    <div><label for="f-co">W jakiej sprawie</label><select id="f-co" name="co"><option>Recenzja książki</option><option>Wywiad</option><option>Patronat medialny</option><option>Artykuł sponsorowany</option><option>Wywiad wizerunkowy</option><option>Inna sprawa</option></select></div>
+    <div><label for="f-tytul">Tytuł książki (jeśli dotyczy)</label><input id="f-tytul" name="tytul"></div>
+   </div>
+   <div><label for="f-tresc">Wiadomość</label><textarea id="f-tresc" name="tresc"></textarea></div>
+   <button class="btn" type="submit">Wyślij wiadomość <svg aria-hidden="true"><use href="#strz"/></svg></button>
+   <p class="info">Odpowiadam mailowo. Dane z formularza służą wyłącznie do odpowiedzi.</p>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer class="ft">
+ <div class="wrap">
+  <div class="kol">
+   <div><a class="logo" href="#gora"><img src="img/logo.webp" width="400" height="203" alt="Kulturalne Rozmowy" loading="lazy"></a><p style="max-width:330px;color:#4d4649">Portal literacko-kulturalny od 2015 roku. Recenzje książek, wywiady z autorami i rozmowy z ludźmi kultury.</p></div>
+   <div><h4>Portal</h4><ul><li><a href="#teksty">Recenzje i wywiady</a></li><li><a href="#o-mnie">O mnie</a></li><li><a href="#opinie">Opinie</a></li><li><a href="https://www.kulturalnerozmowy.pl/p/patronaty.html">Patronaty</a></li></ul></div>
+   <div><h4>Współpraca</h4><ul><li><a href="#wspolpraca">Dla autorów</a></li><li><a href="#wspolpraca">Dla wydawców</a></li><li><a href="https://www.kulturalnerozmowy.pl/p/faq.html">FAQ</a></li><li><a href="#kontakt">Kontakt</a></li></ul></div>
+   <div><h4>Obserwuj</h4><ul><li><a href="https://www.instagram.com/sylwiacegiela/">Instagram</a></li><li><a href="https://www.facebook.com/portalkulturalnerozmowy/">Facebook</a></li><li><a href="https://www.youtube.com/@sylwiacegiela">YouTube</a></li><li><a href="https://www.tiktok.com/@sylwiacegiela">TikTok</a></li></ul></div>
+  </div>
+  <div class="dol"><span>&copy; <span id="rok">2026</span> Kulturalne Rozmowy. <a href="https://www.kulturalnerozmowy.pl/p/polityka-prywatnosci.html">Polityka prywatności</a></span><a class="wylinka-badge" href="https://wylinka.pl/?utm_source=kulturalnerozmowy.pl&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a></div>
+ </div>
+</footer>
+
+<script>
+document.getElementById('rok').textContent=new Date().getFullYear();
+(function(){
+ var b=document.querySelector('.burger');
+ b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-otw');b.setAttribute('aria-expanded',o)});
+ document.querySelectorAll('.nav a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-otw');b.setAttribute('aria-expanded','false')})});
+ var linki=[].slice.call(document.querySelectorAll('.nav a:not(.btn)'));
+ var sekcje=linki.map(function(a){return document.querySelector(a.getAttribute('href'))});
+ function akt(){var y=window.scrollY+120,i=-1;sekcje.forEach(function(s,k){if(s&&s.offsetTop<=y)i=k});linki.forEach(function(a,k){a.classList.toggle('on',k===i)})}
+ window.addEventListener('scroll',akt,{passive:true});akt();
+ document.querySelectorAll('.karuzela').forEach(function(k){
+  var t=k.querySelector('.tor'),l=k.querySelector('.w-lewo'),p=k.querySelector('.w-prawo');
+  function krok(){var e=t.firstElementChild;return e?e.getBoundingClientRect().width+24:300}
+  function stan(){l.disabled=t.scrollLeft<4;p.disabled=t.scrollLeft+t.clientWidth>=t.scrollWidth-4}
+  l.onclick=function(){t.scrollBy({left:-krok(),behavior:'smooth'})};
+  p.onclick=function(){t.scrollBy({left:krok(),behavior:'smooth'})};
+  t.addEventListener('scroll',stan,{passive:true});window.addEventListener('resize',stan);stan();
+  var x0,s0,ruch=false;
+  t.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse')return;x0=e.clientX;s0=t.scrollLeft;ruch=false;
+   function mv(ev){var d=ev.clientX-x0;if(Math.abs(d)>5){ruch=true;t.classList.add('ciag')}t.scrollLeft=s0-d}
+   function up(){window.removeEventListener('pointermove',mv);window.removeEventListener('pointerup',up);
+    if(ruch){var w=krok();t.classList.remove('ciag');t.scrollTo({left:Math.round(t.scrollLeft/w)*w,behavior:'smooth'})}}
+   window.addEventListener('pointermove',mv);window.addEventListener('pointerup',up)});
+  t.addEventListener('dragstart',function(e){e.preventDefault()});
+ });
+ document.getElementById('formularz').addEventListener('submit',function(e){e.preventDefault();
+  if(this.querySelector('.ok'))return;var d=document.createElement('p');d.className='ok';
+  d.textContent='To podgląd strony, więc formularz niczego nie wysyła. Na docelowej stronie wiadomość trafi prosto na sylwia.cegiela@gmail.com.';this.appendChild(d)});
+})();
+</script>
+</body>
+</html>
