@@ -163,6 +163,13 @@ textarea{min-height:140px;resize:vertical}
 .wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
 .wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
 @media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
+/* wyroznione */
+.wyr{padding-top:0}
+.wyr .wrap>.live{border-top:1px solid var(--linia);padding-top:72px}
+.wyr-lista a{font-family:"Fraunces",serif;font-size:20px;line-height:1.35}
+.wyr-lista a span{font-family:"Figtree",sans-serif}
+.nav .mega-kol li a[href$="#wyroznione"]{font-weight:600;color:var(--mal)}
+@media (max-width:900px){.wyr .wrap>.live{padding-top:48px}}
 /* menu kategorii */
 .rozw{position:static}
 .rozw-btn{background:none;border:0;font:inherit;font-size:16px;font-weight:500;color:var(--ink);padding:6px 0;cursor:pointer;display:inline-flex;align-items:center;gap:8px;border-bottom:2px solid transparent}
@@ -314,9 +321,9 @@ textarea{min-height:140px;resize:vertical}
      </div>
     </div>
    </div>
+   <a href="#wyroznione">Wyróżnione recenzje</a>
    <a href="#o-mnie">O mnie</a>
    <a href="#wspolpraca">Współpraca</a>
-   <a href="#opinie">Opinie</a>
    <a href="kategorie.html#szukaj">Szukaj</a>
    <a class="btn" href="#kontakt">Kontakt</a>
   </nav>
@@ -374,6 +381,20 @@ textarea{min-height:140px;resize:vertical}
     </a>
    </div>
    <div class="strz"><button class="w-lewo" aria-label="Poprzednie"><svg style="transform:scaleX(-1)"><use href="#strz"/></svg></button><button class="w-prawo" aria-label="Następne"><svg><use href="#strz"/></svg></button></div>
+  </div>
+ </div>
+</section>
+
+<section id="wyroznione" class="wyr">
+ <div class="wrap">
+  <div class="live">
+   <div>
+    <div class="sep" aria-hidden="true"><svg><use href="#kwiat"/></svg></div>
+    <h2>Wyróżnione recenzje</h2>
+    <p style="margin-top:18px;color:var(--ink2)">Książki, które szczególnie warto przeczytać. Wyróżnienie Kulturalnych Rozmów ma na stronie własną kategorię i stałe miejsce w menu.</p>
+    <a class="btn" href="kategorie.html#wyroznione" style="margin-top:10px">Wszystkie wyróżnione recenzje <svg aria-hidden="true"><use href="#strz"/></svg></a>
+   </div>
+   <ul class="lista wyr-lista"><li><a href="https://www.kulturalnerozmowy.pl/2026/09/recenzja-ksiazki-laura-anna-tomczyk.html">Laura Anna Tomczyk: Życie Kate<span>17 września 2026</span></a></li><li><a href="https://www.kulturalnerozmowy.pl/2026/06/recenzja-ksiazki-krzysztof-piotr-abenda.html">Krzysztof Piotr Łabenda: Kawa. Baśń o psie innym niż wszystkie<span>2 czerwca 2026</span></a></li><li><a href="https://www.kulturalnerozmowy.pl/2026/05/recenzja-ksiazki-anna-maria-bentley.html">Anna-Maria Bentley: Kiedy zgasną światła<span>19 maja 2026</span></a></li><li><a href="https://www.kulturalnerozmowy.pl/2026/03/recenzja-ksiazki-iwona-gajda_31.html">Iwona Gajda: Hologramowy Świat III. Moralność<span>31 marca 2026</span></a></li><li><a href="https://www.kulturalnerozmowy.pl/2026/03/recenzja-ksiazki-piter-obraga-tangram.html">Piter O’Braga: Tangram nazistów<span>26 marca 2026</span></a></li><li><a href="https://www.kulturalnerozmowy.pl/2026/02/recenzja-ksiazki-iwona-gajda.html">Iwona Gajda: Hologramowy Świat I<span>11 lutego 2026</span></a></li></ul>
   </div>
  </div>
 </section>
